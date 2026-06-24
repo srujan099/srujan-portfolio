@@ -257,48 +257,6 @@ section { padding: 88px 0; }
 .tl-bullets b { color: var(--ink); font-weight: 700; background: linear-gradient(transparent 60%, var(--amber-dim) 60%); padding: 0 1px; }
 
 /* =====================================================
-   CASE STUDY
-===================================================== */
-.case-card {
-  background: var(--white); border-radius: 20px; overflow: hidden; border: 1px solid var(--line-soft);
-  box-shadow: 0 24px 50px -24px rgba(11,17,32,0.18);
-}
-.case-head {
-  background: var(--ink); color: var(--paper); padding: 36px 36px 30px;
-  display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; flex-wrap: wrap;
-  position: relative; overflow: hidden;
-}
-.case-head::before {
-  content: ''; position: absolute; top: -60%; right: -10%; width: 280px; height: 280px;
-  background: radial-gradient(circle, rgba(52,211,153,0.22), transparent 70%);
-}
-.case-tag {
-  font-family: var(--mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em;
-  background: var(--signal); color: var(--white); padding: 5px 13px; border-radius: 999px;
-  display: inline-block; margin-bottom: 16px; font-weight: 700;
-}
-.case-head h3 { font-family: var(--display); font-size: 1.6rem; margin-bottom: 8px; position: relative; }
-.case-head p { color: #C5CEE3; font-size: 0.95rem; max-width: 480px; position: relative; }
-.case-link {
-  background: var(--paper); color: var(--ink) !important; padding: 11px 20px; border-radius: 999px;
-  font-size: 0.85rem; font-weight: 700; white-space: nowrap; transition: background 0.15s; position: relative;
-}
-.case-link:hover { background: var(--signal); color: var(--white) !important; }
-
-.case-body { padding: 32px 36px; }
-.case-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 30px; }
-.case-metric { text-align: center; padding: 20px 10px; background: var(--paper-dim); border-radius: 12px; }
-.case-metric .num { font-family: var(--mono); font-weight: 700; font-size: 1.4rem; color: var(--signal); }
-.case-metric .lbl { font-size: 0.74rem; color: var(--slate); margin-top: 5px; }
-.case-framework { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
-.framework-item { padding: 16px; border: 1px solid var(--line); border-radius: 10px; border-left: 3px solid var(--mint); }
-.framework-item:nth-child(2) { border-left-color: var(--signal); }
-.framework-item:nth-child(3) { border-left-color: var(--amber); }
-.framework-item:nth-child(4) { border-left-color: var(--ink); }
-.framework-item h4 { font-size: 0.88rem; color: var(--ink); margin-bottom: 6px; font-weight: 700; }
-.framework-item p { font-size: 0.8rem; color: var(--slate); line-height: 1.5; }
-
-/* =====================================================
    INDUSTRY GRID
 ===================================================== */
 .industry-grid {
@@ -505,8 +463,6 @@ footer { background: var(--ink); color: #7C89A8; padding: 28px 0; text-align: ce
   .skills-grid { grid-template-columns: 1fr; }
   .achieve-grid { grid-template-columns: 1fr; }
   .timeline-item { grid-template-columns: 1fr; gap: 10px; }
-  .case-grid { grid-template-columns: repeat(2, 1fr); }
-  .case-framework { grid-template-columns: repeat(2, 1fr); }
   .deck-stage { height: 420px; }
 }
 @media (max-width: 680px) {
@@ -517,9 +473,6 @@ footer { background: var(--ink); color: #7C89A8; padding: 28px 0; text-align: ce
   section { padding: 60px 0; }
   .industry-grid { grid-template-columns: 1fr 1fr; }
   .cta-buttons { flex-direction: column; }
-  .case-head { flex-direction: column; }
-  .case-grid { grid-template-columns: 1fr 1fr; }
-  .case-framework { grid-template-columns: 1fr; }
   .cert-row { flex-direction: column; }
   .pin-card { flex: 0 0 84vw; }
   .deck-card { width: 84vw; }
@@ -536,7 +489,6 @@ footer { background: var(--ink); color: #7C89A8; padding: 28px 0; text-align: ce
     <div class="logo">SK<span>.</span></div>
     <ul class="nav-links">
       <li><a href="#experience">Experience</a></li>
-      <li><a href="#case-study">Case Study</a></li>
       <li><a href="#industries">Industries</a></li>
       <li><a href="#recognition">Recognition</a></li>
       <li><a href="#certifications">Certifications</a></li>
@@ -546,7 +498,6 @@ footer { background: var(--ink); color: #7C89A8; padding: 28px 0; text-align: ce
   </nav>
 </header>
 
-<!-- ============ HERO ============ -->
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
@@ -585,7 +536,6 @@ footer { background: var(--ink); color: #7C89A8; padding: 28px 0; text-align: ce
   </div>
 </section>
 
-<!-- ============ ACHIEVEMENTS ============ -->
 <section>
   <div class="wrap">
     <div class="section-head">
@@ -610,7 +560,6 @@ footer { background: var(--ink); color: #7C89A8; padding: 28px 0; text-align: ce
   </div>
 </section>
 
-<!-- ============ EXPERIENCE ============ -->
 <section id="experience" class="bg-dim">
   <div class="wrap">
     <div class="section-head">
@@ -693,58 +642,6 @@ footer { background: var(--ink); color: #7C89A8; padding: 28px 0; text-align: ce
   </div>
 </section>
 
-<!-- ============ CASE STUDY ============ -->
-<section id="case-study">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="section-eyebrow">Featured Work</div>
-      <h2 class="section-title">A strategy deck, end to end</h2>
-      <p class="section-desc">A real Meta Ads diagnostic and strategy I built at Pixis for Blissclub, a women's activewear eCommerce brand — from raw performance data to creative recommendations.</p>
-    </div>
-
-    <div class="case-card">
-      <div class="case-head">
-        <div>
-          <span class="case-tag">Meta Ads · eCommerce</span>
-          <h3>Blissclub — Performance Diagnostic &amp; Optimization Strategy</h3>
-          <p>Full-funnel CTR/CVR/CPL analysis across a 3-month window, campaign-and-adset-level ROAS breakdown, and a prioritized optimization roadmap.</p>
-        </div>
-        <a href="https://www.blissclub.com" target="_blank" rel="noopener" class="case-link">Visit Blissclub.com →</a>
-      </div>
-
-      <div class="case-body">
-        <div class="case-grid">
-          <div class="case-metric"><div class="num">3.88</div><div class="lbl">Best adset ROAS</div></div>
-          <div class="case-metric"><div class="num">37%</div><div class="lbl">Of results from 1 campaign</div></div>
-          <div class="case-metric"><div class="num">4.55%</div><div class="lbl">Top campaign CVR</div></div>
-          <div class="case-metric"><div class="num">19</div><div class="lbl">Active adsets analyzed</div></div>
-        </div>
-
-        <h4 style="font-family:var(--display); font-size:1.02rem; color:var(--ink); margin-bottom:16px; font-weight:700;">Optimization framework applied</h4>
-        <div class="case-framework">
-          <div class="framework-item">
-            <h4>Dig into demographics</h4>
-            <p>Analyzed age, gender, location, and time-of-day data to understand true audience composition.</p>
-          </div>
-          <div class="framework-item">
-            <h4>Funnel analysis</h4>
-            <p>Tracked user interactions at each stage of the conversion funnel to isolate bottlenecks.</p>
-          </div>
-          <div class="framework-item">
-            <h4>Ad frequency control</h4>
-            <p>Evaluated frequency to protect reach efficiency without tipping into creative fatigue.</p>
-          </div>
-          <div class="framework-item">
-            <h4>A/B testing</h4>
-            <p>Controlled experiments across creatives, landing pages, and audience targeting.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ INDUSTRIES ============ -->
 <section id="industries" class="bg-dim">
   <div class="wrap">
     <div class="section-head">
@@ -756,7 +653,6 @@ footer { background: var(--ink); color: #7C89A8; padding: 28px 0; text-align: ce
   </div>
 </section>
 
-<!-- ============ EXPERIMENTATION ============ -->
 <section>
   <div class="wrap">
     <div class="section-head">
@@ -781,7 +677,6 @@ footer { background: var(--ink); color: #7C89A8; padding: 28px 0; text-align: ce
   </div>
 </section>
 
-<!-- ============ RECOGNITION — PINBOARD CAROUSEL ============ -->
 <section id="recognition" class="bg-dim">
   <div class="wrap">
     <div class="section-head">
@@ -794,7 +689,6 @@ footer { background: var(--ink); color: #7C89A8; padding: 28px 0; text-align: ce
       <div class="pin-track-wrap">
         <div class="pin-track" id="pinTrack">
 
-           
          <div class="pin-card">
             <div class="pin-pin"></div>
             <div class="pin-media"><img src="assets/award_monthly.jpg" alt="Pixis Trailblazers Monthly Award Winner 2025"></div>
@@ -863,7 +757,6 @@ footer { background: var(--ink); color: #7C89A8; padding: 28px 0; text-align: ce
   </div>
 </section>
 
-<!-- ============ CERTIFICATIONS — DECK CAROUSEL ============ -->
 <section id="certifications">
   <div class="wrap">
     <div class="deck-section">
@@ -951,7 +844,6 @@ footer { background: var(--ink); color: #7C89A8; padding: 28px 0; text-align: ce
   </div>
 </section>
 
-<!-- ============ SKILLS / MARTECH ============ -->
 <section id="skills" class="bg-dim">
   <div class="wrap">
     <div class="section-head">
@@ -999,7 +891,6 @@ footer { background: var(--ink); color: #7C89A8; padding: 28px 0; text-align: ce
   </div>
 </section>
 
-<!-- ============ EDUCATION ============ -->
 <section id="education">
   <div class="wrap">
     <div class="section-head">
@@ -1016,7 +907,6 @@ footer { background: var(--ink); color: #7C89A8; padding: 28px 0; text-align: ce
   </div>
 </section>
 
-<!-- ============ BEYOND WORK ============ -->
 <section class="bg-dim">
   <div class="wrap">
     <div class="section-head">
@@ -1036,7 +926,6 @@ footer { background: var(--ink); color: #7C89A8; padding: 28px 0; text-align: ce
   </div>
 </section>
 
-<!-- ============ CTA ============ -->
 <section class="cta-section" id="contact">
   <div class="wrap">
     <h2>Let's talk growth.</h2>
