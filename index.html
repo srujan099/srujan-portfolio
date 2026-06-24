@@ -4,649 +4,530 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Srujan Kazipeta — Growth & Performance Marketing Leader</title>
-<meta name="description" content="Growth & Performance Marketing Leader | Product Growth | AdTech Solutions. Rs.100Cr+ annual media management across 25+ countries.">
+<meta name="description" content="Growth & Performance Marketing Leader managing Rs.100Cr+ annual media across 25+ countries. Product Growth, AdTech Solutions, Marketing Science.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
-  :root {
-    --navy: #0A1F44;
-    --navy-deep: #061530;
-    --white: #FFFFFF;
-    --off-white: #F7F8FC;
-    --accent: #2E5EAA;
-    --accent-light: #DCE8FA;
-    --coral: #FF6B4A;
-    --coral-light: #FFE4DB;
-    --gold: #FFC93C;
-    --gold-light: #FFF3D6;
-    --text: #1A2B45;
-    --muted: #64748B;
-    --border: #E6E9F2;
-    --success: #1E7B52;
+/* =====================================================
+   TOKENS
+===================================================== */
+:root {
+  --ink: #0B1120;
+  --ink-soft: #1B2333;
+  --paper: #F5F3EC;
+  --paper-dim: #EBE7DA;
+  --white: #FFFFFF;
+  --signal: #FF5B33;
+  --signal-dim: #FFE2D6;
+  --mint: #34D399;
+  --mint-dim: #D7F5E9;
+  --amber: #FBBF24;
+  --amber-dim: #FEF3D6;
+  --slate: #5B6478;
+  --line: rgba(11,17,32,0.12);
+  --line-soft: rgba(11,17,32,0.07);
 
-    --font-display: 'Space Grotesk', sans-serif;
-    --font-body: 'Inter', sans-serif;
-    --font-mono: 'JetBrains Mono', monospace;
-  }
+  --display: 'Fraunces', serif;
+  --body: 'Inter', sans-serif;
+  --mono: 'JetBrains Mono', monospace;
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
+  --maxw: 1200px;
+}
 
-  body {
-    font-family: var(--font-body);
-    color: var(--text);
-    background: var(--white);
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--body);
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
+}
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+img { max-width: 100%; display: block; }
+button { font-family: inherit; cursor: pointer; }
+:focus-visible { outline: 2.5px solid var(--signal); outline-offset: 3px; border-radius: 2px; }
 
-  @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
-      scroll-behavior: auto !important;
-    }
-  }
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 28px; }
 
-  a { color: inherit; text-decoration: none; }
-  ul { list-style: none; }
-  img { max-width: 100%; display: block; }
+/* =====================================================
+   NAV
+===================================================== */
+header {
+  position: sticky; top: 0; z-index: 200;
+  background: rgba(245,243,236,0.88);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+}
+nav {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 28px; max-width: var(--maxw); margin: 0 auto;
+}
+.logo {
+  font-family: var(--display); font-weight: 700; font-size: 1.3rem;
+  color: var(--ink); letter-spacing: -0.01em;
+}
+.logo span { color: var(--signal); }
+.nav-links { display: flex; gap: 30px; font-size: 0.86rem; font-weight: 600; color: var(--slate); }
+.nav-links a { transition: color 0.15s; position: relative; }
+.nav-links a:hover { color: var(--ink); }
+.nav-cta {
+  background: var(--ink); color: var(--paper) !important;
+  padding: 10px 20px; border-radius: 999px; font-size: 0.84rem; font-weight: 700;
+  transition: background 0.18s, transform 0.18s;
+}
+.nav-cta:hover { background: var(--signal); transform: translateY(-1px); }
+.nav-burger {
+  display: none; flex-direction: column; gap: 5px; background: none; border: none; padding: 6px;
+}
+.nav-burger span { width: 22px; height: 2px; background: var(--ink); border-radius: 2px; }
 
-  :focus-visible {
-    outline: 2px solid var(--coral);
-    outline-offset: 3px;
-  }
+/* =====================================================
+   HERO
+===================================================== */
+.hero { padding: 64px 0 0; position: relative; overflow: hidden; }
+.hero-grid {
+  display: grid; grid-template-columns: 1.25fr 1fr; gap: 48px; align-items: center;
+  padding-bottom: 56px;
+}
+.profile-row { display: flex; align-items: center; gap: 14px; margin-bottom: 28px; }
+.profile-photo, .profile-photo-fallback {
+  width: 58px; height: 58px; border-radius: 50%; object-fit: cover; flex-shrink: 0;
+  border: 3px solid var(--white);
+  box-shadow: 0 4px 14px rgba(11,17,32,0.18);
+}
+.profile-photo-fallback {
+  background: var(--ink); color: var(--paper); display: none; align-items: center; justify-content: center;
+  font-family: var(--display); font-weight: 700; font-size: 1.1rem;
+}
+.profile-name { font-family: var(--display); font-weight: 700; font-size: 1.08rem; color: var(--ink); }
+.profile-role { font-size: 0.84rem; color: var(--slate); margin-top: 1px; font-weight: 500; }
 
-  .wrap {
-    max-width: 1180px;
-    margin: 0 auto;
-    padding: 0 32px;
-  }
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--mono); font-size: 0.74rem; font-weight: 600;
+  color: var(--signal); text-transform: uppercase; letter-spacing: 0.07em;
+  margin-bottom: 22px; padding: 6px 14px 6px 10px;
+  background: var(--signal-dim); border-radius: 999px;
+}
+.eyebrow::before {
+  content: ''; width: 7px; height: 7px; background: var(--mint); border-radius: 50%;
+  display: inline-block; animation: blink 1.8s infinite;
+}
+@keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0.35; } }
 
-  header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: rgba(255,255,255,0.92);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--border);
-  }
+h1 {
+  font-family: var(--display); font-size: clamp(2.4rem, 5vw, 3.6rem);
+  line-height: 1.04; font-weight: 700; color: var(--ink); letter-spacing: -0.015em;
+  margin-bottom: 22px;
+}
+h1 em { font-style: italic; font-weight: 500; color: var(--signal); }
+h1 .underline-mark { position: relative; white-space: nowrap; }
+h1 .underline-mark svg { position: absolute; left: -2%; bottom: -0.12em; width: 104%; height: 0.28em; z-index: -1; }
 
-  nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 18px 32px;
-    max-width: 1180px;
-    margin: 0 auto;
-  }
+.hero-sub { font-size: 1.08rem; color: var(--slate); max-width: 520px; line-height: 1.68; }
 
-  .logo {
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: 1.05rem;
-    color: var(--navy);
-    letter-spacing: -0.02em;
-  }
-  .logo span { color: var(--coral); }
+.hero-actions { display: flex; gap: 12px; margin-top: 30px; flex-wrap: wrap; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px; padding: 14px 26px; border-radius: 999px;
+  font-weight: 700; font-size: 0.9rem; transition: all 0.18s; border: 1.5px solid transparent;
+}
+.btn-primary { background: var(--ink); color: var(--paper); }
+.btn-primary:hover { background: var(--signal); transform: translateY(-2px); box-shadow: 0 10px 20px -8px rgba(255,91,51,0.5); }
+.btn-secondary { background: transparent; color: var(--ink); border-color: var(--line); }
+.btn-secondary:hover { border-color: var(--ink); background: var(--white); }
 
-  .nav-links {
-    display: flex;
-    gap: 32px;
-    font-size: 0.86rem;
-    font-weight: 500;
-    color: var(--muted);
-  }
-  .nav-links a { transition: color 0.15s; }
-  .nav-links a:hover { color: var(--navy); }
+/* hero dashboard card */
+.dash-card {
+  background: var(--ink); border-radius: 18px; padding: 28px 26px; color: var(--paper);
+  position: relative; overflow: hidden;
+  box-shadow: 0 30px 60px -20px rgba(11,17,32,0.45);
+}
+.dash-card::before {
+  content: ''; position: absolute; top: -50%; right: -40%; width: 320px; height: 320px;
+  background: radial-gradient(circle, rgba(255,91,51,0.35), transparent 70%);
+}
+.dash-head {
+  display: flex; align-items: center; justify-content: space-between; margin-bottom: 22px; position: relative;
+}
+.dash-label { font-family: var(--mono); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: #9CA9C4; }
+.dash-dots { display: flex; gap: 5px; }
+.dash-dots span { width: 7px; height: 7px; border-radius: 50%; background: rgba(255,255,255,0.18); }
+.dash-dots span:nth-child(1) { background: var(--signal); }
 
-  .nav-cta {
-    background: var(--navy);
-    color: var(--white) !important;
-    padding: 10px 20px;
-    border-radius: 6px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    transition: background 0.15s, transform 0.15s;
-  }
-  .nav-cta:hover { background: var(--coral); transform: translateY(-1px); }
+.dash-row {
+  display: flex; justify-content: space-between; align-items: baseline; padding: 13px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1); position: relative;
+}
+.dash-row:last-child { border-bottom: none; padding-bottom: 0; }
+.dash-row:first-of-type { padding-top: 0; }
+.dash-num { font-family: var(--mono); font-size: 1.5rem; font-weight: 700; color: var(--white); }
+.dash-num.up { color: var(--mint); }
+.dash-label-r { font-size: 0.8rem; color: #AEB9D1; text-align: right; max-width: 165px; }
+.dash-trend { display: inline-flex; align-items: center; gap: 3px; font-family: var(--mono); font-size: 0.68rem; font-weight: 600; margin-left: 8px; }
+.dash-trend.pos { color: var(--mint); }
 
-  .hero {
-    padding: 84px 0 60px;
-    background:
-      radial-gradient(ellipse 600px 400px at 90% -10%, var(--gold-light) 0%, transparent 60%),
-      radial-gradient(ellipse 500px 400px at -10% 10%, var(--coral-light) 0%, transparent 55%),
-      var(--white);
-    border-bottom: 1px solid var(--border);
-    position: relative;
-    overflow: hidden;
-  }
+/* ticker */
+.ticker-wrap {
+  background: var(--ink); border-top: 1px solid rgba(255,255,255,0.08); border-bottom: 1px solid var(--line);
+  overflow: hidden; position: relative; padding: 13px 0;
+}
+.ticker-track { display: flex; gap: 0; width: max-content; animation: ticker-scroll 32s linear infinite; }
+.ticker-wrap:hover .ticker-track { animation-play-state: paused; }
+@keyframes ticker-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.ticker-item {
+  display: flex; align-items: center; gap: 10px; padding: 0 28px; border-right: 1px solid rgba(255,255,255,0.1);
+  font-family: var(--mono); font-size: 0.82rem; color: #C5CEE3; white-space: nowrap;
+}
+.ticker-item b { color: var(--white); font-weight: 600; }
+.ticker-item .pos { color: var(--mint); }
+.ticker-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--signal); }
 
-  .hero-grid {
-    display: grid;
-    grid-template-columns: 1.3fr 1fr;
-    gap: 56px;
-    align-items: center;
-    position: relative;
-  }
+/* =====================================================
+   SECTIONS
+===================================================== */
+section { padding: 88px 0; }
+.section-head { margin-bottom: 44px; max-width: 660px; }
+.section-eyebrow {
+  font-family: var(--mono); font-size: 0.74rem; color: var(--signal); text-transform: uppercase;
+  letter-spacing: 0.08em; margin-bottom: 12px; font-weight: 600; display: flex; align-items: center; gap: 8px;
+}
+.section-eyebrow::before { content: ''; width: 18px; height: 2px; background: var(--signal); display: inline-block; }
+.section-title {
+  font-family: var(--display); font-size: clamp(1.7rem, 3.4vw, 2.3rem); font-weight: 700;
+  color: var(--ink); letter-spacing: -0.01em;
+}
+.section-desc { color: var(--slate); margin-top: 12px; font-size: 1rem; max-width: 600px; }
+.bg-ink { background: var(--ink); color: var(--paper); }
+.bg-ink .section-title { color: var(--paper); }
+.bg-ink .section-desc { color: #AEB9D1; }
+.bg-dim { background: var(--paper-dim); }
 
-  .profile-row {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-bottom: 24px;
-  }
-  .profile-photo {
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid var(--white);
-    box-shadow: 0 4px 16px rgba(10,31,68,0.18), 0 0 0 1px var(--border);
-    flex-shrink: 0;
-    background: var(--navy);
-  }
-  .profile-photo-fallback {
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    flex-shrink: 0;
-    background: var(--navy);
-    color: var(--white);
-    display: none;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: 1.1rem;
-    border: 3px solid var(--white);
-    box-shadow: 0 4px 16px rgba(10,31,68,0.18), 0 0 0 1px var(--border);
-  }
-  .profile-name {
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: 1.05rem;
-    color: var(--navy);
-  }
-  .profile-role {
-    font-size: 0.84rem;
-    color: var(--muted);
-    margin-top: 2px;
-  }
+/* =====================================================
+   ACHIEVEMENTS
+===================================================== */
+.achieve-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.achieve-cell {
+  background: var(--white); padding: 30px 26px; border-radius: 16px; border: 1px solid var(--line-soft);
+  position: relative; overflow: hidden;
+}
+.achieve-cell::before {
+  content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 5px;
+}
+.achieve-cell:nth-child(1)::before { background: var(--signal); }
+.achieve-cell:nth-child(2)::before { background: var(--mint); }
+.achieve-cell:nth-child(3)::before { background: var(--amber); }
+.achieve-num { font-family: var(--display); font-size: 2.4rem; font-weight: 700; color: var(--ink); line-height: 1; }
+.achieve-num span { color: var(--signal); }
+.achieve-cap { font-size: 0.88rem; color: var(--slate); margin-top: 10px; line-height: 1.5; }
 
-  .eyebrow {
-    font-family: var(--font-mono);
-    font-size: 0.78rem;
-    color: var(--coral);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    margin-bottom: 18px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-weight: 500;
-  }
-  .eyebrow::before {
-    content: '';
-    width: 8px;
-    height: 8px;
-    background: var(--success);
-    border-radius: 50%;
-    display: inline-block;
-    animation: pulse 2s infinite;
-  }
-  @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.4; }
-  }
+/* =====================================================
+   EXPERIENCE TIMELINE
+===================================================== */
+.timeline { position: relative; }
+.timeline-item {
+  display: grid; grid-template-columns: 190px 1fr; gap: 36px; padding: 34px 0;
+  border-bottom: 1px solid var(--line);
+}
+.timeline-item:first-child { padding-top: 0; }
+.timeline-item:last-child { border-bottom: none; }
+.tl-meta { padding-top: 4px; }
+.tl-date { font-family: var(--mono); font-size: 0.78rem; color: var(--signal); font-weight: 600; }
+.tl-company { font-family: var(--display); font-weight: 700; color: var(--ink); margin-top: 6px; font-size: 1.08rem; }
+.tl-location { font-size: 0.8rem; color: var(--slate); margin-top: 2px; }
+.tl-role { font-weight: 700; font-size: 1.14rem; color: var(--ink); margin-bottom: 14px; font-family: var(--display); }
+.tl-bullets li { position: relative; padding-left: 22px; margin-bottom: 11px; font-size: 0.95rem; color: var(--ink-soft); }
+.tl-bullets li::before {
+  content: ''; position: absolute; left: 0; top: 8px; width: 7px; height: 7px;
+  background: var(--signal); border-radius: 50%;
+}
+.tl-bullets b { color: var(--ink); font-weight: 700; background: linear-gradient(transparent 60%, var(--amber-dim) 60%); padding: 0 1px; }
 
-  h1 {
-    font-family: var(--font-display);
-    font-size: 3.1rem;
-    line-height: 1.08;
-    font-weight: 700;
-    color: var(--navy);
-    letter-spacing: -0.02em;
-    margin-bottom: 20px;
-  }
-  h1 .accent-word { color: var(--coral); }
-  h1 .accent-word2 { color: var(--accent); }
+/* =====================================================
+   CASE STUDY
+===================================================== */
+.case-card {
+  background: var(--white); border-radius: 20px; overflow: hidden; border: 1px solid var(--line-soft);
+  box-shadow: 0 24px 50px -24px rgba(11,17,32,0.18);
+}
+.case-head {
+  background: var(--ink); color: var(--paper); padding: 36px 36px 30px;
+  display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; flex-wrap: wrap;
+  position: relative; overflow: hidden;
+}
+.case-head::before {
+  content: ''; position: absolute; top: -60%; right: -10%; width: 280px; height: 280px;
+  background: radial-gradient(circle, rgba(52,211,153,0.22), transparent 70%);
+}
+.case-tag {
+  font-family: var(--mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em;
+  background: var(--signal); color: var(--white); padding: 5px 13px; border-radius: 999px;
+  display: inline-block; margin-bottom: 16px; font-weight: 700;
+}
+.case-head h3 { font-family: var(--display); font-size: 1.6rem; margin-bottom: 8px; position: relative; }
+.case-head p { color: #C5CEE3; font-size: 0.95rem; max-width: 480px; position: relative; }
+.case-link {
+  background: var(--paper); color: var(--ink) !important; padding: 11px 20px; border-radius: 999px;
+  font-size: 0.85rem; font-weight: 700; white-space: nowrap; transition: background 0.15s; position: relative;
+}
+.case-link:hover { background: var(--signal); color: var(--white) !important; }
 
-  .hero-sub {
-    font-size: 1.12rem;
-    color: var(--muted);
-    max-width: 540px;
-    line-height: 1.65;
-  }
+.case-body { padding: 32px 36px; }
+.case-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 30px; }
+.case-metric { text-align: center; padding: 20px 10px; background: var(--paper-dim); border-radius: 12px; }
+.case-metric .num { font-family: var(--mono); font-weight: 700; font-size: 1.4rem; color: var(--signal); }
+.case-metric .lbl { font-size: 0.74rem; color: var(--slate); margin-top: 5px; }
+.case-framework { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.framework-item { padding: 16px; border: 1px solid var(--line); border-radius: 10px; border-left: 3px solid var(--mint); }
+.framework-item:nth-child(2) { border-left-color: var(--signal); }
+.framework-item:nth-child(3) { border-left-color: var(--amber); }
+.framework-item:nth-child(4) { border-left-color: var(--ink); }
+.framework-item h4 { font-size: 0.88rem; color: var(--ink); margin-bottom: 6px; font-weight: 700; }
+.framework-item p { font-size: 0.8rem; color: var(--slate); line-height: 1.5; }
 
-  .hero-actions {
-    display: flex;
-    gap: 14px;
-    margin-top: 32px;
-    flex-wrap: wrap;
-  }
+/* =====================================================
+   INDUSTRY GRID
+===================================================== */
+.industry-grid {
+  display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px;
+  background: var(--line); border: 1px solid var(--line); border-radius: 14px; overflow: hidden;
+}
+.industry-cell { background: var(--white); padding: 26px 18px; transition: background 0.18s; cursor: default; }
+.industry-cell:hover { background: var(--paper-dim); }
+.industry-cell .ind-num { font-family: var(--mono); font-size: 0.72rem; color: var(--signal); font-weight: 700; margin-bottom: 8px; }
+.industry-cell .ind-name { font-weight: 700; font-size: 0.92rem; color: var(--ink); margin-bottom: 8px; font-family: var(--display); }
+.industry-cell .ind-clients { font-size: 0.78rem; color: var(--slate); line-height: 1.5; }
 
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 13px 26px;
-    border-radius: 6px;
-    font-weight: 600;
-    font-size: 0.92rem;
-    transition: all 0.15s;
-    border: 1.5px solid transparent;
-  }
-  .btn-primary { background: var(--navy); color: var(--white); }
-  .btn-primary:hover { background: var(--coral); transform: translateY(-1px); }
-  .btn-secondary { background: transparent; color: var(--navy); border-color: var(--border); }
-  .btn-secondary:hover { border-color: var(--navy); }
+/* =====================================================
+   SKILLS
+===================================================== */
+.skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.skill-card {
+  background: var(--white); border: 1px solid var(--line-soft); border-radius: 16px; padding: 26px;
+  transition: transform 0.18s, box-shadow 0.18s;
+}
+.skill-card:hover { transform: translateY(-4px); box-shadow: 0 16px 32px -12px rgba(11,17,32,0.15); }
+.skill-card h3 { font-family: var(--display); font-size: 1.05rem; color: var(--ink); margin-bottom: 16px; display: flex; align-items: center; gap: 10px; font-weight: 700; }
+.skill-card h3 .dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+.skill-card:nth-child(1) h3 .dot { background: var(--signal); }
+.skill-card:nth-child(2) h3 .dot { background: var(--mint); }
+.skill-card:nth-child(3) h3 .dot { background: var(--amber); }
+.skill-card:nth-child(4) h3 .dot { background: var(--ink); }
+.skill-card:nth-child(5) h3 .dot { background: var(--signal); }
+.skill-card:nth-child(6) h3 .dot { background: var(--mint); }
+.tool-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.tool-tag {
+  background: var(--paper-dim); border: 1px solid var(--line); color: var(--ink-soft); font-size: 0.78rem;
+  font-weight: 600; padding: 6px 13px; border-radius: 999px;
+}
 
-  .stat-panel {
-    background: var(--navy);
-    border-radius: 12px;
-    padding: 36px 32px;
-    color: var(--white);
-    position: relative;
-    overflow: hidden;
-  }
-  .stat-panel::before {
-    content: '';
-    position: absolute;
-    top: -40%;
-    right: -30%;
-    width: 280px;
-    height: 280px;
-    background: radial-gradient(circle, rgba(255,107,74,0.35), transparent 70%);
-  }
-  .stat-panel::after {
-    content: '';
-    position: absolute;
-    bottom: -30%;
-    left: -20%;
-    width: 220px;
-    height: 220px;
-    background: radial-gradient(circle, rgba(255,201,60,0.25), transparent 70%);
-  }
-  .stat-panel-label {
-    font-family: var(--font-mono);
-    font-size: 0.72rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: #FFD9A0;
-    margin-bottom: 24px;
-    position: relative;
-  }
-  .stat-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    padding: 14px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.12);
-    position: relative;
-  }
-  .stat-row:last-child { border-bottom: none; padding-bottom: 0; }
-  .stat-row:first-child { padding-top: 0; }
-  .stat-num {
-    font-family: var(--font-display);
-    font-size: 1.7rem;
-    font-weight: 700;
-    color: var(--white);
-  }
-  .stat-label {
-    font-size: 0.82rem;
-    color: #B8C7E0;
-    text-align: right;
-    max-width: 160px;
-  }
+/* =====================================================
+   RECOGNITION CAROUSEL — "PINBOARD" STYLE
+===================================================== */
+.pin-carousel { position: relative; padding: 50px 0 20px; }
+.pin-carousel::before {
+  content: ''; position: absolute; inset: 0; background-image:
+    linear-gradient(var(--line-soft) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line-soft) 1px, transparent 1px);
+  background-size: 28px 28px; opacity: 0.5; border-radius: 18px;
+}
+.pin-track-wrap { overflow: hidden; position: relative; }
+.pin-track { display: flex; gap: 26px; transition: transform 0.5s cubic-bezier(0.65,0,0.35,1); padding: 6px 6px 26px; }
+.pin-card {
+  flex: 0 0 300px; background: var(--white); border-radius: 4px; padding: 16px 16px 22px;
+  box-shadow: 0 14px 30px -10px rgba(11,17,32,0.22);
+  transform: rotate(var(--rot, -1deg));
+  position: relative;
+}
+.pin-card:nth-child(odd) { --rot: 1.4deg; }
+.pin-card:nth-child(even) { --rot: -1.6deg; }
+.pin-card:nth-child(3n) { --rot: 0.6deg; }
+.pin-pin {
+  position: absolute; top: -10px; left: 50%; transform: translateX(-50%) rotate(-8deg);
+  width: 22px; height: 22px; border-radius: 50%; background: var(--signal);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.3), inset 0 -3px 4px rgba(0,0,0,0.2);
+  z-index: 2;
+}
+.pin-card:nth-child(even) .pin-pin { background: var(--mint); transform: translateX(-50%) rotate(6deg); }
+.pin-media { border-radius: 2px; overflow: hidden; margin-bottom: 14px; background: var(--paper-dim); }
+.pin-media img { width: 100%; height: 200px; object-fit: cover; object-position: top; }
+.pin-tag {
+  font-family: var(--mono); font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.05em;
+  color: var(--signal); font-weight: 700; margin-bottom: 8px;
+}
+.pin-quote { font-size: 0.88rem; color: var(--ink-soft); line-height: 1.55; margin-bottom: 12px; font-family: var(--display); font-style: italic; }
+.pin-author { display: flex; align-items: center; gap: 9px; }
+.pin-avatar {
+  width: 30px; height: 30px; border-radius: 50%; background: var(--ink); color: var(--paper);
+  display: flex; align-items: center; justify-content: center; font-family: var(--display);
+  font-weight: 700; font-size: 0.76rem; flex-shrink: 0;
+}
+.pin-name { font-weight: 700; font-size: 0.82rem; color: var(--ink); }
+.pin-role { font-size: 0.72rem; color: var(--slate); }
 
-  section { padding: 84px 0; }
-  .section-head { margin-bottom: 44px; max-width: 640px; }
-  .section-eyebrow {
-    font-family: var(--font-mono);
-    font-size: 0.76rem;
-    color: var(--coral);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    margin-bottom: 10px;
-    font-weight: 500;
-  }
-  .section-title {
-    font-family: var(--font-display);
-    font-size: 2.1rem;
-    font-weight: 700;
-    color: var(--navy);
-    letter-spacing: -0.01em;
-  }
-  .section-desc { color: var(--muted); margin-top: 12px; font-size: 1rem; }
-  .bg-tint { background: var(--off-white); }
+.pin-controls { display: flex; justify-content: center; gap: 14px; margin-top: 8px; position: relative; }
+.pin-nav {
+  width: 44px; height: 44px; border-radius: 50%; background: var(--ink); color: var(--paper);
+  border: none; display: flex; align-items: center; justify-content: center; font-size: 1.2rem;
+  transition: background 0.18s, transform 0.18s; box-shadow: 0 8px 18px -6px rgba(11,17,32,0.3);
+}
+.pin-nav:hover { background: var(--signal); transform: scale(1.08); }
+.pin-progress { display: flex; align-items: center; gap: 6px; }
+.pin-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--line); border: none; padding: 0; transition: all 0.2s; cursor: pointer; }
+.pin-dot.active { background: var(--signal); width: 20px; border-radius: 4px; }
 
-  .industry-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 1px;
-    background: var(--border);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  .industry-cell {
-    background: var(--white);
-    padding: 26px 18px;
-    transition: background 0.15s;
-    cursor: default;
-    border-top: 3px solid transparent;
-  }
-  .industry-cell:nth-child(5n+1) { border-top-color: var(--coral); }
-  .industry-cell:nth-child(5n+2) { border-top-color: var(--accent); }
-  .industry-cell:nth-child(5n+3) { border-top-color: var(--gold); }
-  .industry-cell:nth-child(5n+4) { border-top-color: var(--success); }
-  .industry-cell:nth-child(5n+5) { border-top-color: var(--navy); }
-  .industry-cell:hover { background: var(--off-white); }
-  .industry-cell .ind-name { font-weight: 600; font-size: 0.92rem; color: var(--navy); margin-bottom: 8px; }
-  .industry-cell .ind-clients { font-size: 0.78rem; color: var(--muted); line-height: 1.5; }
+/* =====================================================
+   CERTIFICATION CAROUSEL — "CREDENTIAL DECK" STYLE
+===================================================== */
+.deck-section { background: var(--ink); border-radius: 24px; padding: 56px 8px 48px; position: relative; overflow: hidden; }
+.deck-section::before {
+  content: ''; position: absolute; top: -20%; left: -10%; width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(255,91,51,0.18), transparent 70%);
+}
+.deck-section::after {
+  content: ''; position: absolute; bottom: -30%; right: -10%; width: 360px; height: 360px;
+  background: radial-gradient(circle, rgba(52,211,153,0.15), transparent 70%);
+}
+.deck-head { padding: 0 36px 36px; position: relative; }
+.deck-head .section-eyebrow { color: var(--mint); }
+.deck-head .section-eyebrow::before { background: var(--mint); }
+.deck-head .section-title { color: var(--paper); }
+.deck-head .section-desc { color: #AEB9D1; }
 
-  .timeline-item {
-    display: grid;
-    grid-template-columns: 200px 1fr;
-    gap: 40px;
-    padding: 36px 0;
-    border-bottom: 1px solid var(--border);
-  }
-  .timeline-item:first-child { padding-top: 0; }
-  .timeline-item:last-child { border-bottom: none; }
-  .tl-meta { padding-top: 4px; }
-  .tl-date { font-family: var(--font-mono); font-size: 0.78rem; color: var(--coral); font-weight: 500; }
-  .tl-company { font-family: var(--font-display); font-weight: 600; color: var(--navy); margin-top: 6px; font-size: 1.02rem; }
-  .tl-location { font-size: 0.8rem; color: var(--muted); margin-top: 2px; }
-  .tl-role { font-weight: 600; font-size: 1.12rem; color: var(--text); margin-bottom: 12px; }
-  .tl-bullets li {
-    position: relative; padding-left: 20px; margin-bottom: 10px; font-size: 0.94rem; color: var(--text);
-  }
-  .tl-bullets li::before {
-    content: ''; position: absolute; left: 0; top: 9px; width: 6px; height: 6px;
-    background: var(--coral); border-radius: 50%;
-  }
-  .tl-bullets b { color: var(--navy); font-weight: 700; }
+.deck-stage { position: relative; height: 460px; display: flex; align-items: center; justify-content: center; perspective: 1400px; }
+.deck-card {
+  position: absolute; width: min(380px, 80vw); background: var(--paper); border-radius: 18px; overflow: hidden;
+  box-shadow: 0 30px 60px -16px rgba(0,0,0,0.5);
+  transition: transform 0.5s cubic-bezier(0.65,0,0.35,1), opacity 0.5s, filter 0.5s;
+  cursor: grab;
+}
+.deck-card-media { background: var(--white); padding: 18px; }
+.deck-card-media img { width: 100%; height: 200px; object-fit: contain; border-radius: 8px; }
+.deck-card-info { padding: 18px 22px 22px; }
+.deck-card-tag {
+  font-family: var(--mono); font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.05em;
+  color: var(--signal); font-weight: 700; margin-bottom: 6px;
+}
+.deck-card-title { font-family: var(--display); font-weight: 700; font-size: 1.1rem; color: var(--ink); margin-bottom: 4px; }
+.deck-card-issuer { font-size: 0.8rem; color: var(--slate); }
 
-  .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-  .skill-card {
-    background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 26px;
-    transition: transform 0.15s, box-shadow 0.15s;
-  }
-  .skill-card:hover { transform: translateY(-3px); box-shadow: 0 12px 24px -8px rgba(10,31,68,0.12); }
-  .skill-card h3 { font-family: var(--font-display); font-size: 1rem; color: var(--navy); margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
-  .skill-card h3 .dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
-  .skill-card:nth-child(1) h3 .dot { background: var(--coral); }
-  .skill-card:nth-child(2) h3 .dot { background: var(--accent); }
-  .skill-card:nth-child(3) h3 .dot { background: var(--gold); }
-  .skill-card:nth-child(4) h3 .dot { background: var(--success); }
-  .skill-card:nth-child(5) h3 .dot { background: var(--navy); }
-  .skill-card:nth-child(6) h3 .dot { background: var(--coral); }
-  .tool-tags { display: flex; flex-wrap: wrap; gap: 8px; }
-  .tool-tag { background: var(--off-white); border: 1px solid var(--border); color: var(--text); font-size: 0.78rem; font-weight: 500; padding: 6px 12px; border-radius: 20px; }
+.deck-controls { display: flex; justify-content: center; align-items: center; gap: 18px; margin-top: 18px; position: relative; }
+.deck-nav {
+  width: 46px; height: 46px; border-radius: 50%; background: var(--paper); color: var(--ink);
+  border: none; display: flex; align-items: center; justify-content: center; font-size: 1.25rem;
+  transition: background 0.18s, transform 0.18s; box-shadow: 0 8px 20px -6px rgba(0,0,0,0.4);
+}
+.deck-nav:hover { background: var(--mint); transform: scale(1.08); }
+.deck-counter { font-family: var(--mono); color: var(--paper); font-size: 0.9rem; font-weight: 600; min-width: 56px; text-align: center; }
+.deck-counter span { color: var(--mint); }
 
-  .marquee-wrap {
-    overflow: hidden; position: relative; padding: 8px 0;
-    -webkit-mask-image: linear-gradient(90deg, transparent, white 8%, white 92%, transparent);
-    mask-image: linear-gradient(90deg, transparent, white 8%, white 92%, transparent);
-  }
-  .marquee-track { display: flex; gap: 56px; width: max-content; animation: scroll-left 38s linear infinite; }
-  @keyframes scroll-left { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-  .marquee-wrap:hover .marquee-track { animation-play-state: paused; }
-  .brand-chip { font-family: var(--font-display); font-weight: 600; font-size: 1.05rem; color: var(--muted); white-space: nowrap; display: flex; align-items: center; gap: 8px; }
-  .brand-chip .vert { font-family: var(--font-mono); font-size: 0.65rem; background: var(--coral-light); color: var(--coral); padding: 2px 8px; border-radius: 10px; text-transform: uppercase; letter-spacing: 0.03em; }
+/* =====================================================
+   AWARDS CHIPS / CERT QUICK SCAN
+===================================================== */
+.cert-row { display: flex; gap: 14px; flex-wrap: wrap; }
+.cert-chip {
+  display: flex; align-items: center; gap: 12px; background: var(--white); border: 1px solid var(--line-soft);
+  border-radius: 14px; padding: 14px 18px; flex: 1; min-width: 220px; transition: transform 0.15s;
+}
+.cert-chip:hover { transform: translateY(-2px); }
+.cert-icon {
+  width: 40px; height: 40px; border-radius: 10px; background: var(--amber-dim); display: flex;
+  align-items: center; justify-content: center; font-size: 1.15rem; flex-shrink: 0;
+}
+.cert-name { font-weight: 700; font-size: 0.88rem; color: var(--ink); }
+.cert-issuer { font-size: 0.76rem; color: var(--slate); }
+.cert-subhead {
+  font-size: 0.8rem; color: var(--slate); margin-bottom: 14px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.05em; font-family: var(--mono);
+}
 
-  .achieve-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-  .achieve-cell {
-    background: var(--white); padding: 32px 26px; border-radius: 10px; border: 1px solid var(--border);
-    border-top: 4px solid var(--coral);
-  }
-  .achieve-cell:nth-child(2) { border-top-color: var(--accent); }
-  .achieve-cell:nth-child(3) { border-top-color: var(--gold); }
-  .achieve-num { font-family: var(--font-display); font-size: 2.2rem; font-weight: 700; color: var(--navy); line-height: 1; }
-  .achieve-num span { color: var(--coral); }
-  .achieve-cap { font-size: 0.86rem; color: var(--muted); margin-top: 8px; }
+/* =====================================================
+   BEYOND WORK
+===================================================== */
+.beyond-row { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; }
+.beyond-text { flex: 1; min-width: 260px; font-size: 0.98rem; color: var(--ink-soft); line-height: 1.65; }
+.beyond-chips { display: flex; flex-wrap: wrap; gap: 10px; flex: 1; min-width: 260px; }
+.beyond-chip {
+  display: inline-flex; align-items: center; gap: 8px; background: var(--white); border: 1px solid var(--line-soft);
+  color: var(--ink); font-size: 0.84rem; font-weight: 700; padding: 10px 17px; border-radius: 999px;
+  transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+}
+.beyond-chip:hover { transform: translateY(-2px) rotate(-1deg); box-shadow: 0 8px 18px -6px rgba(11,17,32,0.15); border-color: var(--signal); }
 
-  .case-study-card {
-    background: var(--white); border: 1px solid var(--border); border-radius: 14px; overflow: hidden;
-    box-shadow: 0 20px 40px -16px rgba(10,31,68,0.1);
-  }
-  .case-study-head {
-    background: linear-gradient(135deg, var(--gold-light), var(--coral-light));
-    padding: 36px 36px 28px;
-    display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; flex-wrap: wrap;
-  }
-  .case-tag { font-family: var(--font-mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; background: var(--navy); color: var(--white); padding: 5px 12px; border-radius: 20px; display: inline-block; margin-bottom: 14px; }
-  .case-study-head h3 { font-family: var(--font-display); font-size: 1.6rem; color: var(--navy); margin-bottom: 8px; }
-  .case-study-head p { color: var(--text); font-size: 0.95rem; max-width: 480px; }
-  .case-link { background: var(--navy); color: var(--white) !important; padding: 10px 18px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; white-space: nowrap; transition: background 0.15s; }
-  .case-link:hover { background: var(--coral); }
+/* =====================================================
+   EDUCATION
+===================================================== */
+.edu-card {
+  display: flex; justify-content: space-between; align-items: center; background: var(--white);
+  border: 1px solid var(--line-soft); border-radius: 16px; padding: 28px 32px;
+}
+.edu-degree { font-weight: 700; color: var(--ink); font-size: 1.04rem; font-family: var(--display); }
+.edu-school { color: var(--slate); font-size: 0.88rem; margin-top: 4px; }
+.edu-date { font-family: var(--mono); font-size: 0.82rem; color: var(--slate); }
 
-  .case-body { padding: 32px 36px; }
-  .case-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-bottom: 28px; }
-  .case-metric { text-align: center; padding: 18px 10px; background: var(--off-white); border-radius: 10px; }
-  .case-metric .num { font-family: var(--font-display); font-weight: 700; font-size: 1.3rem; color: var(--coral); }
-  .case-metric .lbl { font-size: 0.75rem; color: var(--muted); margin-top: 4px; }
+/* =====================================================
+   CTA
+===================================================== */
+.cta-section { background: var(--ink); color: var(--paper); text-align: center; padding: 100px 0; position: relative; overflow: hidden; }
+.cta-section::before {
+  content: ''; position: absolute; top: -20%; left: 50%; transform: translateX(-50%);
+  width: 650px; height: 420px; background: radial-gradient(ellipse, rgba(255,91,51,0.28), transparent 65%);
+}
+.cta-section h2 { font-family: var(--display); font-size: clamp(1.9rem, 4vw, 2.6rem); margin-bottom: 16px; position: relative; font-weight: 700; }
+.cta-section p { color: #AEB9D1; max-width: 480px; margin: 0 auto 32px; position: relative; }
+.cta-buttons { display: flex; gap: 14px; justify-content: center; position: relative; flex-wrap: wrap; }
+.btn-light { background: var(--paper); color: var(--ink); }
+.btn-light:hover { background: var(--amber); }
+.btn-outline-light { border-color: rgba(255,255,255,0.25); color: var(--paper); }
+.btn-outline-light:hover { border-color: var(--paper); background: rgba(255,255,255,0.06); }
 
-  .case-framework { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-  .framework-item { padding: 16px; border: 1px solid var(--border); border-radius: 8px; border-left: 3px solid var(--accent); }
-  .framework-item:nth-child(2) { border-left-color: var(--coral); }
-  .framework-item:nth-child(3) { border-left-color: var(--gold); }
-  .framework-item:nth-child(4) { border-left-color: var(--success); }
-  .framework-item h4 { font-size: 0.88rem; color: var(--navy); margin-bottom: 6px; font-weight: 600; }
-  .framework-item p { font-size: 0.8rem; color: var(--muted); line-height: 1.5; }
+footer { background: var(--ink); color: #7C89A8; padding: 28px 0; text-align: center; font-size: 0.83rem; border-top: 1px solid rgba(255,255,255,0.08); }
 
-  /* ---------- CAROUSEL ---------- */
-  .carousel {
-    position: relative;
-    border-radius: 14px;
-    overflow: hidden;
-    background: var(--white);
-    border: 1px solid var(--border);
-    box-shadow: 0 20px 40px -16px rgba(10,31,68,0.1);
-  }
-  .carousel-track {
-    display: flex;
-    transition: transform 0.45s cubic-bezier(0.65, 0, 0.35, 1);
-  }
-  .carousel-slide {
-    flex: 0 0 100%;
-    min-width: 100%;
-    display: grid;
-    grid-template-columns: 1.1fr 1fr;
-    align-items: stretch;
-  }
-  .carousel-media {
-    background: var(--off-white);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 28px;
-    min-height: 320px;
-  }
-  .carousel-media img {
-    max-width: 100%;
-    max-height: 320px;
-    border-radius: 8px;
-    box-shadow: 0 8px 24px -8px rgba(10,31,68,0.18);
-    object-fit: contain;
-  }
-  .carousel-content {
-    padding: 40px 40px 40px 32px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .carousel-tag {
-    font-family: var(--font-mono);
-    font-size: 0.72rem;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: var(--coral);
-    font-weight: 600;
-    margin-bottom: 14px;
-  }
-  .carousel-quote {
-    font-size: 1rem;
-    color: var(--text);
-    line-height: 1.65;
-    margin-bottom: 20px;
-  }
-  .carousel-author { display: flex; align-items: center; gap: 12px; }
-  .carousel-avatar {
-    width: 40px; height: 40px; border-radius: 50%; background: var(--navy); color: white;
-    display: flex; align-items: center; justify-content: center;
-    font-family: var(--font-display); font-weight: 600; font-size: 0.9rem; flex-shrink: 0;
-  }
-  .carousel-name { font-weight: 600; font-size: 0.92rem; color: var(--navy); }
-  .carousel-role { font-size: 0.8rem; color: var(--muted); }
-
-  .carousel-nav {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 42px; height: 42px;
-    border-radius: 50%;
-    background: var(--white);
-    border: 1px solid var(--border);
-    display: flex; align-items: center; justify-content: center;
-    cursor: pointer;
-    box-shadow: 0 6px 16px -4px rgba(10,31,68,0.18);
-    transition: background 0.15s, transform 0.15s;
-    z-index: 10;
-    color: var(--navy);
-    font-size: 1.1rem;
-  }
-  .carousel-nav:hover { background: var(--coral); color: var(--white); transform: translateY(-50%) scale(1.06); }
-  .carousel-prev { left: 16px; }
-  .carousel-next { right: 16px; }
-
-  .carousel-dots {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    padding: 18px 0;
-    background: var(--off-white);
-    border-top: 1px solid var(--border);
-  }
-  .carousel-dot {
-    width: 8px; height: 8px; border-radius: 50%;
-    background: var(--border);
-    cursor: pointer;
-    transition: background 0.2s, width 0.2s;
-    border: none;
-    padding: 0;
-  }
-  .carousel-dot.active { background: var(--coral); width: 22px; border-radius: 4px; }
-
-  .cert-row { display: flex; gap: 16px; flex-wrap: wrap; }
-  .cert-chip {
-    display: flex; align-items: center; gap: 12px; background: var(--white); border: 1px solid var(--border);
-    border-radius: 10px; padding: 14px 20px; flex: 1; min-width: 220px;
-  }
-  .cert-icon { width: 38px; height: 38px; border-radius: 8px; background: var(--gold-light); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
-  .cert-name { font-weight: 600; font-size: 0.88rem; color: var(--navy); }
-  .cert-issuer { font-size: 0.76rem; color: var(--muted); }
-
-  .edu-card {
-    display: flex; justify-content: space-between; align-items: center; background: var(--off-white);
-    border: 1px solid var(--border); border-radius: 10px; padding: 28px 32px;
-  }
-  .edu-degree { font-weight: 600; color: var(--navy); font-size: 1.02rem; }
-  .edu-school { color: var(--muted); font-size: 0.88rem; margin-top: 4px; }
-  .edu-date { font-family: var(--font-mono); font-size: 0.82rem; color: var(--muted); }
-
-  /* ---------- BEYOND WORK ---------- */
-  .beyond-row {
-    display: flex;
-    align-items: center;
-    gap: 28px;
-    flex-wrap: wrap;
-  }
-  .beyond-text {
-    flex: 1;
-    min-width: 260px;
-    font-size: 0.98rem;
-    color: var(--text);
-    line-height: 1.65;
-  }
-  .beyond-chips {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    flex: 1;
-    min-width: 260px;
-  }
-  .beyond-chip {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: var(--white);
-    border: 1px solid var(--border);
-    color: var(--navy);
-    font-size: 0.84rem;
-    font-weight: 600;
-    padding: 9px 16px;
-    border-radius: 20px;
-    transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
-  }
-  .beyond-chip:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 16px -6px rgba(10,31,68,0.15);
-    border-color: var(--coral);
-  }
-  .beyond-chip .emoji { font-size: 1rem; }
-
-  .cta-section {
-    background: var(--navy); color: var(--white); text-align: center; padding: 92px 0; position: relative; overflow: hidden;
-  }
-  .cta-section::before {
-    content: ''; position: absolute; top: -20%; left: 50%; transform: translateX(-50%);
-    width: 600px; height: 400px; background: radial-gradient(ellipse, rgba(255,107,74,0.25), transparent 65%);
-  }
-  .cta-section h2 { font-family: var(--font-display); font-size: 2.2rem; margin-bottom: 16px; position: relative; }
-  .cta-section p { color: #AFC2E0; max-width: 480px; margin: 0 auto 32px; position: relative; }
-  .cta-buttons { display: flex; gap: 14px; justify-content: center; position: relative; }
-  .btn-light { background: var(--white); color: var(--navy); }
-  .btn-light:hover { background: var(--gold-light); }
-  .btn-outline-light { border-color: rgba(255,255,255,0.3); color: var(--white); }
-  .btn-outline-light:hover { border-color: var(--white); }
-
-  footer { background: var(--navy-deep); color: #8FA8D4; padding: 32px 0; text-align: center; font-size: 0.84rem; }
-
-  @media (max-width: 900px) {
-    .hero-grid { grid-template-columns: 1fr; }
-    .industry-grid { grid-template-columns: repeat(2, 1fr); }
-    .skills-grid { grid-template-columns: 1fr; }
-    .achieve-grid { grid-template-columns: 1fr; }
-    .timeline-item { grid-template-columns: 1fr; gap: 12px; }
-    .case-grid { grid-template-columns: repeat(2, 1fr); }
-    .case-framework { grid-template-columns: repeat(2, 1fr); }
-    .carousel-slide { grid-template-columns: 1fr; }
-    .carousel-media { min-height: 220px; padding: 20px; }
-    .carousel-media img { max-height: 220px; }
-    h1 { font-size: 2.3rem; }
-  }
-  @media (max-width: 640px) {
-    .nav-links { display: none; }
-    .wrap { padding: 0 20px; }
-    nav { padding: 16px 20px; }
-    .hero { padding: 56px 0 40px; }
-    section { padding: 56px 0; }
-    .industry-grid { grid-template-columns: 1fr 1fr; }
-    .cta-buttons { flex-direction: column; }
-    .case-study-head { flex-direction: column; }
-    .case-grid { grid-template-columns: 1fr 1fr; }
-    .case-framework { grid-template-columns: 1fr; }
-    .cert-row { flex-direction: column; }
-    .carousel-content { padding: 28px 24px; }
-    .carousel-nav { width: 36px; height: 36px; font-size: 0.95rem; }
-  }
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+@media (max-width: 980px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .industry-grid { grid-template-columns: repeat(2, 1fr); }
+  .skills-grid { grid-template-columns: 1fr; }
+  .achieve-grid { grid-template-columns: 1fr; }
+  .timeline-item { grid-template-columns: 1fr; gap: 10px; }
+  .case-grid { grid-template-columns: repeat(2, 1fr); }
+  .case-framework { grid-template-columns: repeat(2, 1fr); }
+  .deck-stage { height: 420px; }
+}
+@media (max-width: 680px) {
+  .nav-links { display: none; }
+  .wrap { padding: 0 18px; }
+  nav { padding: 14px 18px; }
+  .hero-grid { padding-bottom: 36px; }
+  section { padding: 60px 0; }
+  .industry-grid { grid-template-columns: 1fr 1fr; }
+  .cta-buttons { flex-direction: column; }
+  .case-head { flex-direction: column; }
+  .case-grid { grid-template-columns: 1fr 1fr; }
+  .case-framework { grid-template-columns: 1fr; }
+  .cert-row { flex-direction: column; }
+  .pin-card { flex: 0 0 84vw; }
+  .pin-media img { height: 170px; }
+  .deck-card { width: 84vw; }
+  .deck-stage { height: 400px; }
+  h1 { font-size: 2.1rem; }
+  .dash-card { padding: 22px 18px; }
+}
 </style>
 </head>
 <body>
@@ -659,12 +540,14 @@
       <li><a href="#case-study">Case Study</a></li>
       <li><a href="#industries">Industries</a></li>
       <li><a href="#recognition">Recognition</a></li>
+      <li><a href="#certifications">Certifications</a></li>
       <li><a href="#skills">Skills</a></li>
     </ul>
     <a href="#contact" class="nav-cta">Get in touch</a>
   </nav>
 </header>
 
+<!-- ============ HERO ============ -->
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
@@ -677,7 +560,7 @@
         </div>
       </div>
       <div class="eyebrow">Open to Growth &amp; Product roles</div>
-      <h1>Growth strategy<br>at <span class="accent-word">Rs.100Cr+</span><br><span class="accent-word2">scale.</span></h1>
+      <h1>Growth strategy,<br>run like a <em>live campaign.</em></h1>
       <p class="hero-sub">I'm Srujan Kazipeta — a growth &amp; performance marketing leader who's managed enterprise media budgets across 25+ countries and 10+ industries, partnering with Product, Engineering, and AI teams to build the measurement infrastructure behind the spend.</p>
       <div class="hero-actions">
         <a href="#experience" class="btn btn-primary">View my work →</a>
@@ -685,27 +568,29 @@
       </div>
     </div>
 
-    <div class="stat-panel">
-      <div class="stat-panel-label">// Career at a glance</div>
-      <div class="stat-row"><span class="stat-num">Rs.100Cr+</span><span class="stat-label">Annual media managed</span></div>
-      <div class="stat-row"><span class="stat-num">25+</span><span class="stat-label">Countries scaled across</span></div>
-      <div class="stat-row"><span class="stat-num">2.5x</span><span class="stat-label">Demo sign-up lift via CAPI</span></div>
-      <div class="stat-row"><span class="stat-num">2M+</span><span class="stat-label">Annual users analyzed</span></div>
-      <div class="stat-row"><span class="stat-num">5+ yrs</span><span class="stat-label">Growth &amp; performance</span></div>
+    <div class="dash-card">
+      <div class="dash-head">
+        <span class="dash-label">// live_performance.sheet</span>
+        <div class="dash-dots"><span></span><span></span><span></span></div>
+      </div>
+      <div class="dash-row"><span class="dash-label-r">Annual media managed</span><span class="dash-num">Rs.100Cr<span class="up">+</span></span></div>
+      <div class="dash-row"><span class="dash-label-r">Countries scaled across</span><span class="dash-num">25+</span></div>
+      <div class="dash-row"><span class="dash-label-r">Demo sign-up lift via CAPI</span><span class="dash-num up">2.5x</span></div>
+      <div class="dash-row"><span class="dash-label-r">Annual users analyzed</span><span class="dash-num">2M+</span></div>
+      <div class="dash-row"><span class="dash-label-r">Growth &amp; performance</span><span class="dash-num">5+ yrs</span></div>
     </div>
+  </div>
+
+  <div class="ticker-wrap">
+    <div class="ticker-track" id="tickerTrack"></div>
   </div>
 </section>
 
-<div style="border-bottom:1px solid var(--border); padding: 28px 0; background:var(--white);">
-  <div class="marquee-wrap">
-    <div class="marquee-track" id="marqueeTrack"></div>
-  </div>
-</div>
-
-<section class="bg-tint">
+<!-- ============ ACHIEVEMENTS ============ -->
+<section>
   <div class="wrap">
     <div class="section-head">
-      <div class="section-eyebrow">// Impact</div>
+      <div class="section-eyebrow">Impact</div>
       <h2 class="section-title">Numbers that tell the story</h2>
       <p class="section-desc">Selected outcomes from enterprise accounts, startup growth functions, and platform-level experimentation.</p>
     </div>
@@ -726,97 +611,100 @@
   </div>
 </section>
 
-<section id="experience">
+<!-- ============ EXPERIENCE ============ -->
+<section id="experience" class="bg-dim">
   <div class="wrap">
     <div class="section-head">
-      <div class="section-eyebrow">// Career</div>
+      <div class="section-eyebrow">Career</div>
       <h2 class="section-title">Experience</h2>
     </div>
 
-    <div class="timeline-item">
-      <div class="tl-meta">
-        <div class="tl-date">Oct 2024 — Present</div>
-        <div class="tl-company">Pixis.ai</div>
-        <div class="tl-location">Bengaluru, India</div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="tl-meta">
+          <div class="tl-date">Oct 2024 — Present</div>
+          <div class="tl-company">Pixis.ai</div>
+          <div class="tl-location">Bengaluru, India</div>
+        </div>
+        <div>
+          <div class="tl-role">Customer Success Strategist — Growth &amp; Performance</div>
+          <ul class="tl-bullets">
+            <li>Manage <b>Rs.1–10Cr monthly media investments</b> across Meta, Google, TikTok, and LinkedIn, owning end-to-end performance and growth strategy for enterprise brands across APAC, EMEA, and India.</li>
+            <li>Direct media planning, growth strategy, and measurement architecture across <b>10+ enterprise verticals</b> — Automotive, Travel, Telecom, Finance, Education, Real Estate, Quick Commerce, Fundraising, and Consumer Goods.</li>
+            <li>Led acquisition strategy for <b>UTI Mutual Fund</b>, partnering with creative teams to test <b>400+ ad variations</b> and adapting budget allocation to market sentiment.</li>
+            <li>Reduced <b>Cost Per Booking by 35% QoQ</b> for Celebrity Cruises Australia through full-funnel diagnostics and audience segmentation.</li>
+            <li>Reduced <b>franchise acquisition costs by 25%</b> for EuroKids through lead quality optimization and sales-aligned strategies.</li>
+            <li>Scaled Ketto's acquisition program beyond <b>Rs.2Cr spend</b>, sustaining <b>ROAS above 4</b> and converting the pilot into a retained account.</li>
+            <li>Partner with Product, AI, and Engineering teams on <b>technical growth audits</b> — GTM validation, CAPI health checks, and pixel diagnostics.</li>
+          </ul>
+        </div>
       </div>
-      <div>
-        <div class="tl-role">Customer Success Strategist — Growth &amp; Performance</div>
-        <ul class="tl-bullets">
-          <li>Manage <b>Rs.1–10Cr monthly media investments</b> across Meta, Google, TikTok, and LinkedIn, owning end-to-end performance and growth strategy for enterprise brands across APAC, EMEA, and India.</li>
-          <li>Direct media planning, growth strategy, and measurement architecture across <b>10+ enterprise verticals</b> — Automotive, Travel, Telecom, Finance, Education, Real Estate, Quick Commerce, Fundraising, and Consumer Goods.</li>
-          <li>Led acquisition strategy for <b>UTI Mutual Fund</b>, partnering with creative teams to test <b>400+ ad variations</b> and adapting budget allocation to market sentiment.</li>
-          <li>Reduced <b>Cost Per Booking by 35% QoQ</b> for Celebrity Cruises Australia through full-funnel diagnostics and audience segmentation.</li>
-          <li>Reduced <b>franchise acquisition costs by 25%</b> for EuroKids through lead quality optimization and sales-aligned strategies.</li>
-          <li>Scaled Ketto's acquisition program beyond <b>Rs.2Cr spend</b>, sustaining <b>ROAS above 4</b> and converting the pilot into a retained account.</li>
-          <li>Partner with Product, AI, and Engineering teams on <b>technical growth audits</b> — GTM validation, CAPI health checks, and pixel diagnostics.</li>
-        </ul>
+
+      <div class="timeline-item">
+        <div class="tl-meta">
+          <div class="tl-date">Dec 2023 — Sep 2024</div>
+          <div class="tl-company">FlexifyMe</div>
+          <div class="tl-location">Pune, Maharashtra, India</div>
+        </div>
+        <div>
+          <div class="tl-role">Growth Product Manager</div>
+          <ul class="tl-bullets">
+            <li>Owned end-to-end marketing operations — performance marketing, website optimization, CRM, content, offline activation, and B2B partnerships — effectively as fractional Head of Growth.</li>
+            <li>Drove <b>45% revenue growth</b>; scaled spend by 40% while reducing <b>CAC by 30%</b> and growing acquisition volume by <b>45%</b>.</li>
+            <li>Directed a customer transformation video campaign generating <b>50+ paid acquisitions</b> at an average ticket size of <b>Rs.35,000</b>.</li>
+            <li>Coordinated with Sales, Engineering, Content, and Clinical Operations to improve lead quality and appointment conversion rates.</li>
+            <li>Ran Unbounce-powered landing page experiments, achieving <b>10% CPL reduction</b> and <b>5% CAC reduction</b> within 15 days.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="tl-meta">
+          <div class="tl-date">Mar 2022 — Nov 2023</div>
+          <div class="tl-company">BrightChamps</div>
+          <div class="tl-location">Bengaluru, India</div>
+        </div>
+        <div>
+          <div class="tl-role">Growth Product Manager</div>
+          <ul class="tl-bullets">
+            <li>Built and scaled BrightChamps' global performance marketing function <b>from solo IC to a 5-person team</b>, working directly with the CEO across <b>25+ international markets</b>.</li>
+            <li>Managed <b>Rs.100Cr+ annual media budgets</b> across Meta, Google, TikTok, and LinkedIn across 4 product verticals.</li>
+            <li>Implemented Meta Conversions API and GTM, achieving <b>2.5x increase in demo sign-ups</b> while cutting completion costs by <b>57%</b>; improved landing page conversion from <b>6% to 8%</b> via Unbounce A/B testing.</li>
+            <li>Launched localized acquisition programs and regional-language campaigns across multiple international markets.</li>
+            <li>Led growth analytics for <b>2M+ annual users</b>; resolved mobile funnel drop-offs lifting paid conversions by <b>15%</b>.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="tl-meta">
+          <div class="tl-date">Jan 2021 — Mar 2022</div>
+          <div class="tl-company">BrightChamps</div>
+          <div class="tl-location">Bengaluru, India</div>
+        </div>
+        <div>
+          <div class="tl-role">Growth Manager</div>
+          <ul class="tl-bullets">
+            <li>Pioneered international expansion into <b>5 new markets</b>, scaling social communities from <b>zero to 150K+ users</b> via localized acquisition strategies.</li>
+            <li>Delivered <b>ROAS 2.5</b> in FY21; improved U.S. sales conversion rate from <b>10% to 15%</b> by redesigning acquisition funnels — earning promotion within 14 months.</li>
+          </ul>
+        </div>
       </div>
     </div>
-
-    <div class="timeline-item">
-      <div class="tl-meta">
-        <div class="tl-date">Dec 2023 — Sep 2024</div>
-        <div class="tl-company">FlexifyMe</div>
-        <div class="tl-location">Pune, Maharashtra, India</div>
-      </div>
-      <div>
-        <div class="tl-role">Growth Product Manager</div>
-        <ul class="tl-bullets">
-          <li>Owned end-to-end marketing operations — performance marketing, website optimization, CRM, content, offline activation, and B2B partnerships — effectively as fractional Head of Growth.</li>
-          <li>Drove <b>45% revenue growth</b>; scaled spend by 40% while reducing <b>CAC by 30%</b> and growing acquisition volume by <b>45%</b>.</li>
-          <li>Directed a customer transformation video campaign generating <b>50+ paid acquisitions</b> at an average ticket size of <b>Rs.35,000</b>.</li>
-          <li>Coordinated with Sales, Engineering, Content, and Clinical Operations to improve lead quality and appointment conversion rates.</li>
-          <li>Ran Unbounce-powered landing page experiments, achieving <b>10% CPL reduction</b> and <b>5% CAC reduction</b> within 15 days.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="tl-meta">
-        <div class="tl-date">Mar 2022 — Nov 2023</div>
-        <div class="tl-company">BrightChamps</div>
-        <div class="tl-location">Bengaluru, India</div>
-      </div>
-      <div>
-        <div class="tl-role">Growth Product Manager</div>
-        <ul class="tl-bullets">
-          <li>Built and scaled BrightChamps' global performance marketing function <b>from solo IC to a 5-person team</b>, working directly with the CEO across <b>25+ international markets</b>.</li>
-          <li>Managed <b>Rs.100Cr+ annual media budgets</b> across Meta, Google, TikTok, and LinkedIn across 4 product verticals.</li>
-          <li>Implemented Meta Conversions API and GTM, achieving <b>2.5x increase in demo sign-ups</b> while cutting completion costs by <b>57%</b>; improved landing page conversion from <b>6% to 8%</b> via Unbounce A/B testing.</li>
-          <li>Launched localized acquisition programs and regional-language campaigns across multiple international markets.</li>
-          <li>Led growth analytics for <b>2M+ annual users</b>; resolved mobile funnel drop-offs lifting paid conversions by <b>15%</b>.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="tl-meta">
-        <div class="tl-date">Jan 2021 — Mar 2022</div>
-        <div class="tl-company">BrightChamps</div>
-        <div class="tl-location">Bengaluru, India</div>
-      </div>
-      <div>
-        <div class="tl-role">Growth Manager</div>
-        <ul class="tl-bullets">
-          <li>Pioneered international expansion into <b>5 new markets</b>, scaling social communities from <b>zero to 150K+ users</b> via localized acquisition strategies.</li>
-          <li>Delivered <b>ROAS 2.5</b> in FY21; improved U.S. sales conversion rate from <b>10% to 15%</b> by redesigning acquisition funnels — earning promotion within 14 months.</li>
-        </ul>
-      </div>
-    </div>
-
   </div>
 </section>
 
-<section id="case-study" class="bg-tint">
+<!-- ============ CASE STUDY ============ -->
+<section id="case-study">
   <div class="wrap">
     <div class="section-head">
-      <div class="section-eyebrow">// Featured Work</div>
+      <div class="section-eyebrow">Featured Work</div>
       <h2 class="section-title">A strategy deck, end to end</h2>
       <p class="section-desc">A real Meta Ads diagnostic and strategy I built at Pixis for Blissclub, a women's activewear eCommerce brand — from raw performance data to creative recommendations.</p>
     </div>
 
-    <div class="case-study-card">
-      <div class="case-study-head">
+    <div class="case-card">
+      <div class="case-head">
         <div>
           <span class="case-tag">Meta Ads · eCommerce</span>
           <h3>Blissclub — Performance Diagnostic &amp; Optimization Strategy</h3>
@@ -833,7 +721,7 @@
           <div class="case-metric"><div class="num">19</div><div class="lbl">Active adsets analyzed</div></div>
         </div>
 
-        <h4 style="font-family:var(--font-display); font-size:1rem; color:var(--navy); margin-bottom:16px;">Optimization framework applied</h4>
+        <h4 style="font-family:var(--display); font-size:1.02rem; color:var(--ink); margin-bottom:16px; font-weight:700;">Optimization framework applied</h4>
         <div class="case-framework">
           <div class="framework-item">
             <h4>Dig into demographics</h4>
@@ -857,10 +745,11 @@
   </div>
 </section>
 
-<section id="industries">
+<!-- ============ INDUSTRIES ============ -->
+<section id="industries" class="bg-dim">
   <div class="wrap">
     <div class="section-head">
-      <div class="section-eyebrow">// Breadth</div>
+      <div class="section-eyebrow">Breadth</div>
       <h2 class="section-title">Industries I've operated in</h2>
       <p class="section-desc">Most performance marketers specialize in one or two verticals. Across enterprise consulting and in-house growth roles, I've run acquisition strategy across ten.</p>
     </div>
@@ -868,220 +757,204 @@
   </div>
 </section>
 
-<section class="bg-tint">
+<!-- ============ EXPERIMENTATION ============ -->
+<section>
   <div class="wrap">
     <div class="section-head">
-      <div class="section-eyebrow">// Methodology</div>
+      <div class="section-eyebrow">Methodology</div>
       <h2 class="section-title">Experimentation &amp; measurement</h2>
       <p class="section-desc">The infrastructure behind the spend — how I think about signal quality, attribution, and testing.</p>
     </div>
     <div class="skills-grid">
       <div class="skill-card">
         <h3><span class="dot"></span>A/B &amp; Multivariate Testing</h3>
-        <p style="font-size:0.9rem; color:var(--muted);">50+ experiments on Unbounce and VWO across hero copy, CTA placement, form length, and trust signals — lifting conversion rates by up to 20%.</p>
+        <p style="font-size:0.9rem; color:var(--slate);">50+ experiments on Unbounce and VWO across hero copy, CTA placement, form length, and trust signals — lifting conversion rates by up to 20%.</p>
       </div>
       <div class="skill-card">
         <h3><span class="dot"></span>Signal Engineering</h3>
-        <p style="font-size:0.9rem; color:var(--muted);">Implemented Meta Conversions API and Google Offline Conversions to feed privacy-compliant signals into ad platforms, improving lead quality and AI bidding.</p>
+        <p style="font-size:0.9rem; color:var(--slate);">Implemented Meta Conversions API and Google Offline Conversions to feed privacy-compliant signals into ad platforms, improving lead quality and AI bidding.</p>
       </div>
       <div class="skill-card">
         <h3><span class="dot"></span>Attribution Frameworks</h3>
-        <p style="font-size:0.9rem; color:var(--muted);">Custom multi-touch attribution dashboards in GA4, Looker Studio, and Tableau; UTM taxonomies and GTM event schemas end-to-end.</p>
+        <p style="font-size:0.9rem; color:var(--slate);">Custom multi-touch attribution dashboards in GA4, Looker Studio, and Tableau; UTM taxonomies and GTM event schemas end-to-end.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section id="recognition">
+<!-- ============ RECOGNITION — PINBOARD CAROUSEL ============ -->
+<section id="recognition" class="bg-dim">
   <div class="wrap">
     <div class="section-head">
-      <div class="section-eyebrow">// In Their Words</div>
-      <h2 class="section-title">Recognition &amp; credentials</h2>
-      <p class="section-desc">A few moments that stuck with me, plus a certification — shared here with permission from internal conversations.</p>
+      <div class="section-eyebrow">In Their Words</div>
+      <h2 class="section-title">Recognition, pinned up</h2>
+      <p class="section-desc">Moments from leadership and company-wide calls — shared here with permission from internal conversations.</p>
     </div>
 
-    <div class="carousel" id="recogCarousel">
-      <div class="carousel-track" id="carouselTrack">
+    <div class="pin-carousel">
+      <div class="pin-track-wrap">
+        <div class="pin-track" id="pinTrack">
 
-        <div class="carousel-slide">
-          <div class="carousel-media"><img src="assets/pixis_spot_award.jpg" alt="Pixis Spot Award Winner 2025 - Srujan Kazipeta"></div>
-          <div class="carousel-content">
-            <div class="carousel-tag">Pixis Trailblazers · Spot Award 2025</div>
-            <div class="carousel-quote">Recognized as a Spot Award Winner in the "Pixis Trailblazers" company-wide awards — given for dedication and excellence in client results.</div>
-            <div class="carousel-author">
-              <div class="carousel-avatar">PX</div>
-              <div>
-                <div class="carousel-name">Pixis.ai</div>
-                <div class="carousel-role">Spot Award Winner, 2025</div>
-              </div>
+          <div class="pin-card">
+            <div class="pin-pin"></div>
+            <div class="pin-media"><img src="assets/recognition_3.jpg" alt="Recognition shared on a company-wide call at BrightChamps"></div>
+            <div class="pin-tag">All-Hands · 354 attendees</div>
+            <div class="pin-quote">"30+ geos managed single-handedly... lowest CPDs across geographies, across the entire industry."</div>
+            <div class="pin-author">
+              <div class="pin-avatar">EP</div>
+              <div><div class="pin-name">Shared by Er. Priyanka Arora</div><div class="pin-role">BrightChamps All-Hands</div></div>
             </div>
           </div>
-        </div>
 
-        <div class="carousel-slide">
-          <div class="carousel-media"><img src="assets/pixis_monthly_award.jpg" alt="Pixis Monthly Award Winner 2025 - Srujan Kazipeta"></div>
-          <div class="carousel-content">
-            <div class="carousel-tag">Pixis Trailblazers · Monthly Award 2025</div>
-            <div class="carousel-quote">Recognized as a Monthly Award Winner in the "Pixis Trailblazers" company-wide awards, alongside Strategy &amp; Operations and Mid-Market leadership.</div>
-            <div class="carousel-author">
-              <div class="carousel-avatar">PX</div>
-              <div>
-                <div class="carousel-name">Pixis.ai</div>
-                <div class="carousel-role">Monthly Award Winner, 2025</div>
-              </div>
+          <div class="pin-card">
+            <div class="pin-pin"></div>
+            <div class="pin-media"><img src="assets/recognition_1.jpg" alt="Slack message from Ravi Bhushan, December 2021"></div>
+            <div class="pin-tag">Slack · Dec 2021</div>
+            <div class="pin-quote">"If people at various levels start thinking about how we can make things better, then as a group we are a superpower and unstoppable."</div>
+            <div class="pin-author">
+              <div class="pin-avatar">RB</div>
+              <div><div class="pin-name">Ravi Bhushan</div><div class="pin-role">Founder &amp; CEO, BrightChamps</div></div>
             </div>
           </div>
-        </div>
 
-        <div class="carousel-slide">
-          <div class="carousel-media"><img src="assets/recognition_3.jpg" alt="Recognition shared on a company-wide call at BrightChamps"></div>
-          <div class="carousel-content">
-            <div class="carousel-tag">Company-wide Call · 354 attendees</div>
-            <div class="carousel-quote">Singled out on a company-wide call for managing 30+ geographies single-handedly, coordinating directly with supply, sales, and tech — and posting the lowest CPDs across geographies, across the entire industry.</div>
-            <div class="carousel-author">
-              <div class="carousel-avatar">EP</div>
-              <div>
-                <div class="carousel-name">Shared by Er. Priyanka Arora</div>
-                <div class="carousel-role">BrightChamps All-Hands</div>
-              </div>
+          <div class="pin-card">
+            <div class="pin-pin"></div>
+            <div class="pin-media"><img src="assets/recognition_2.jpg" alt="Slack message from Ravi Bhushan, January 2022"></div>
+            <div class="pin-tag">Slack · Jan 2022</div>
+            <div class="pin-quote">"Ownership is something which I really appreciate." 👍</div>
+            <div class="pin-author">
+              <div class="pin-avatar">RB</div>
+              <div><div class="pin-name">Ravi Bhushan</div><div class="pin-role">Founder &amp; CEO, BrightChamps</div></div>
             </div>
           </div>
-        </div>
 
-        <div class="carousel-slide">
-          <div class="carousel-media"><img src="assets/recognition_1.jpg" alt="Slack message from Ravi Bhushan, December 2021"></div>
-          <div class="carousel-content">
-            <div class="carousel-tag">Slack · December 2021</div>
-            <div class="carousel-quote">"@Srujan from marketing reached out to me today sharing his idea on peer-to-peer experience for kids — how kids can engage and learn from each other. He did his own bit of research before reaching out. I am so happy to hear from him. I do not believe in a top-down approach in creativity and innovation. If people at various levels start thinking about how we can make things better, then as a group we are a superpower and unstoppable."</div>
-            <div class="carousel-author">
-              <div class="carousel-avatar">RB</div>
-              <div>
-                <div class="carousel-name">Ravi Bhushan</div>
-                <div class="carousel-role">Founder &amp; CEO, BrightChamps</div>
-              </div>
+          <div class="pin-card">
+            <div class="pin-pin"></div>
+            <div class="pin-media"><img src="assets/award_spot.jpg" alt="Pixis Trailblazers Spot Award Winner 2025"></div>
+            <div class="pin-tag">Pixis Spot Award · 2025</div>
+            <div class="pin-quote">Recognized as a Spot Award Winner under "Pixis Trailblazers — Recognising Excellence."</div>
+            <div class="pin-author">
+              <div class="pin-avatar">PX</div>
+              <div><div class="pin-name">Pixis.ai</div><div class="pin-role">Spot Award Winner</div></div>
             </div>
           </div>
-        </div>
 
-        <div class="carousel-slide">
-          <div class="carousel-media"><img src="assets/recognition_2.jpg" alt="Slack message from Ravi Bhushan, January 2022"></div>
-          <div class="carousel-content">
-            <div class="carousel-tag">Slack · January 2022</div>
-            <div class="carousel-quote">"Hi — ownership is something which I really appreciate. Just saw your message to Vinay." 👍</div>
-            <div class="carousel-author">
-              <div class="carousel-avatar">RB</div>
-              <div>
-                <div class="carousel-name">Ravi Bhushan</div>
-                <div class="carousel-role">Founder &amp; CEO, BrightChamps</div>
-              </div>
+          <div class="pin-card">
+            <div class="pin-pin"></div>
+            <div class="pin-media"><img src="assets/award_monthly.jpg" alt="Pixis Trailblazers Monthly Award Winner 2025"></div>
+            <div class="pin-tag">Pixis Monthly Award · 2025</div>
+            <div class="pin-quote">Recognized as a Monthly Award Winner — for passion, performance, and perseverance.</div>
+            <div class="pin-author">
+              <div class="pin-avatar">PX</div>
+              <div><div class="pin-name">Pixis.ai</div><div class="pin-role">Monthly Award Winner</div></div>
             </div>
           </div>
-        </div>
 
-        <div class="carousel-slide">
-          <div class="carousel-media"><img src="assets/certificate-1.jpg" alt="Google Digital Garage certificate - Fundamentals of Digital Marketing"></div>
-          <div class="carousel-content">
-            <div class="carousel-tag">Certification · July 2021</div>
-            <div class="carousel-quote">Completed The Fundamentals of Digital Marketing certification exam through Google Digital Garage — endorsed by IAB Europe and accredited by The Open University.</div>
-            <div class="carousel-author">
-              <div class="carousel-avatar">GD</div>
-              <div>
-                <div class="carousel-name">Google Digital Garage</div>
-                <div class="carousel-role">Certificate ID: 2PH 4LQ B7W</div>
-              </div>
-            </div>
-          </div>
         </div>
-
-        <div class="carousel-slide">
-          <div class="carousel-media"><img src="assets/cert_python.jpg" alt="SoloLearn Python Core certificate"></div>
-          <div class="carousel-content">
-            <div class="carousel-tag">Certification · April 2020</div>
-            <div class="carousel-quote">Completed the Python Core course on SoloLearn, demonstrating theoretical understanding of Python fundamentals — supporting the analytics and automation work behind campaign reporting.</div>
-            <div class="carousel-author">
-              <div class="carousel-avatar">SL</div>
-              <div>
-                <div class="carousel-name">SoloLearn</div>
-                <div class="carousel-role">Certificate ID: CT-NA4ICB5M</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="carousel-slide">
-          <div class="carousel-media"><img src="assets/cert_javascript.jpg" alt="SoloLearn JavaScript certificate"></div>
-          <div class="carousel-content">
-            <div class="carousel-tag">Certification · April 2020</div>
-            <div class="carousel-quote">Completed the JavaScript course on SoloLearn, building foundational understanding of front-end scripting — useful context for working with GTM, pixel implementation, and tracking debugging.</div>
-            <div class="carousel-author">
-              <div class="carousel-avatar">SL</div>
-              <div>
-                <div class="carousel-name">SoloLearn</div>
-                <div class="carousel-role">Certificate ID: CT-B8IHT9TE</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="carousel-slide">
-          <div class="carousel-media"><img src="assets/cert_sql.png" alt="SoloLearn SQL certificate"></div>
-          <div class="carousel-content">
-            <div class="carousel-tag">Certification · June 2021</div>
-            <div class="carousel-quote">Completed the SQL course on SoloLearn, demonstrating theoretical and practical understanding of database querying — directly supporting attribution analysis and campaign reporting work.</div>
-            <div class="carousel-author">
-              <div class="carousel-avatar">SL</div>
-              <div>
-                <div class="carousel-name">SoloLearn</div>
-                <div class="carousel-role">Certificate ID: CT-TPSTVJLP</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="carousel-slide">
-          <div class="carousel-media"><img src="assets/award_spot.jpg" alt="Pixis Trailblazers Spot Award Winner 2025"></div>
-          <div class="carousel-content">
-            <div class="carousel-tag">Pixis Spot Award · 2025</div>
-            <div class="carousel-quote">Recognized as a Spot Award Winner under "Pixis Trailblazers — Recognising Excellence," celebrating dedication and excellence in the Customer Success Strategist role.</div>
-            <div class="carousel-author">
-              <div class="carousel-avatar">PX</div>
-              <div>
-                <div class="carousel-name">Pixis.ai</div>
-                <div class="carousel-role">Spot Award Winner</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="carousel-slide">
-          <div class="carousel-media"><img src="assets/award_monthly.jpg" alt="Pixis Trailblazers Monthly Award Winner 2025"></div>
-          <div class="carousel-content">
-            <div class="carousel-tag">Pixis Monthly Award · 2025</div>
-            <div class="carousel-quote">Recognized as a Monthly Award Winner under "Pixis Trailblazers — Recognising Excellence," for passion, performance, and perseverance as a Customer Success Strategist.</div>
-            <div class="carousel-author">
-              <div class="carousel-avatar">PX</div>
-              <div>
-                <div class="carousel-name">Pixis.ai</div>
-                <div class="carousel-role">Monthly Award Winner</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
       </div>
 
-      <button class="carousel-nav carousel-prev" id="carouselPrev" aria-label="Previous">‹</button>
-      <button class="carousel-nav carousel-next" id="carouselNext" aria-label="Next">›</button>
-
-      <div class="carousel-dots" id="carouselDots"></div>
+      <div class="pin-controls">
+        <button class="pin-nav" id="pinPrev" aria-label="Previous">‹</button>
+        <div class="pin-progress" id="pinDots"></div>
+        <button class="pin-nav" id="pinNext" aria-label="Next">›</button>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="skills" class="bg-tint">
+<!-- ============ CERTIFICATIONS — DECK CAROUSEL ============ -->
+<section id="certifications">
+  <div class="wrap">
+    <div class="deck-section">
+      <div class="deck-head">
+        <div class="section-eyebrow">Credentials</div>
+        <h2 class="section-title">The certification stack</h2>
+        <p class="section-desc">Swipe through, drag, or use the arrows — every credential behind the skills listed above.</p>
+      </div>
+
+      <div class="deck-stage" id="deckStage">
+        <div class="deck-card" data-i="0">
+          <div class="deck-card-media"><img src="assets/certificate-1.jpg" alt="Google Digital Garage certificate"></div>
+          <div class="deck-card-info">
+            <div class="deck-card-tag">Digital Marketing · Jul 2021</div>
+            <div class="deck-card-title">Fundamentals of Digital Marketing</div>
+            <div class="deck-card-issuer">Google Digital Garage · IAB Europe Endorsed</div>
+          </div>
+        </div>
+        <div class="deck-card" data-i="1">
+          <div class="deck-card-media"><img src="assets/cert_python.jpg" alt="SoloLearn Python Core certificate"></div>
+          <div class="deck-card-info">
+            <div class="deck-card-tag">Python · Apr 2020</div>
+            <div class="deck-card-title">Python Core</div>
+            <div class="deck-card-issuer">SoloLearn · Certificate CT-NA4ICB5M</div>
+          </div>
+        </div>
+        <div class="deck-card" data-i="2">
+          <div class="deck-card-media"><img src="assets/cert_javascript.jpg" alt="SoloLearn JavaScript certificate"></div>
+          <div class="deck-card-info">
+            <div class="deck-card-tag">JavaScript · Apr 2020</div>
+            <div class="deck-card-title">JavaScript</div>
+            <div class="deck-card-issuer">SoloLearn · Certificate CT-B8IHT9TE</div>
+          </div>
+        </div>
+        <div class="deck-card" data-i="3">
+          <div class="deck-card-media"><img src="assets/cert_sql.png" alt="SoloLearn SQL certificate"></div>
+          <div class="deck-card-info">
+            <div class="deck-card-tag">SQL · Jun 2021</div>
+            <div class="deck-card-title">SQL</div>
+            <div class="deck-card-issuer">SoloLearn · Certificate CT-TPSTVJLP</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="deck-controls">
+        <button class="deck-nav" id="deckPrev" aria-label="Previous">‹</button>
+        <div class="deck-counter" id="deckCounter"><span>1</span> / 4</div>
+        <button class="deck-nav" id="deckNext" aria-label="Next">›</button>
+      </div>
+    </div>
+
+    <div style="margin-top:48px;">
+      <p class="cert-subhead">Company Awards</p>
+      <div class="cert-row" style="margin-bottom:32px;">
+        <div class="cert-chip">
+          <div class="cert-icon">🏆</div>
+          <div><div class="cert-name">Spot Award Winner</div><div class="cert-issuer">Pixis Trailblazers · 2025</div></div>
+        </div>
+        <div class="cert-chip">
+          <div class="cert-icon">🏅</div>
+          <div><div class="cert-name">Monthly Award Winner</div><div class="cert-issuer">Pixis Trailblazers · 2025</div></div>
+        </div>
+      </div>
+
+      <p class="cert-subhead">Quick Reference</p>
+      <div class="cert-row">
+        <div class="cert-chip">
+          <div class="cert-icon">🎓</div>
+          <div><div class="cert-name">Digital Marketing</div><div class="cert-issuer">Google Digital Garage</div></div>
+        </div>
+        <div class="cert-chip">
+          <div class="cert-icon">🐍</div>
+          <div><div class="cert-name">Python Core</div><div class="cert-issuer">SoloLearn · 2020</div></div>
+        </div>
+        <div class="cert-chip">
+          <div class="cert-icon">🟨</div>
+          <div><div class="cert-name">JavaScript</div><div class="cert-issuer">SoloLearn · 2020</div></div>
+        </div>
+        <div class="cert-chip">
+          <div class="cert-icon">🗄️</div>
+          <div><div class="cert-name">SQL</div><div class="cert-issuer">SoloLearn · 2021</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS / MARTECH ============ -->
+<section id="skills" class="bg-dim">
   <div class="wrap">
     <div class="section-head">
-      <div class="section-eyebrow">// Toolkit</div>
+      <div class="section-eyebrow">Toolkit</div>
       <h2 class="section-title">Growth, analytics &amp; martech</h2>
     </div>
     <div class="skills-grid">
@@ -1125,69 +998,11 @@
   </div>
 </section>
 
-<section>
+<!-- ============ EDUCATION ============ -->
+<section id="education">
   <div class="wrap">
     <div class="section-head">
-      <div class="section-eyebrow">// Awards &amp; Certifications</div>
-      <h2 class="section-title">Recognition &amp; continued learning</h2>
-    </div>
-
-    <p style="font-size:0.82rem; color:var(--muted); margin-bottom:12px; font-weight:600; text-transform:uppercase; letter-spacing:0.04em;">Company Awards</p>
-    <div class="cert-row" style="margin-bottom:32px;">
-      <div class="cert-chip">
-        <div class="cert-icon">🏆</div>
-        <div>
-          <div class="cert-name">Spot Award Winner</div>
-          <div class="cert-issuer">Pixis Trailblazers · 2025</div>
-        </div>
-      </div>
-      <div class="cert-chip">
-        <div class="cert-icon">🏅</div>
-        <div>
-          <div class="cert-name">Monthly Award Winner</div>
-          <div class="cert-issuer">Pixis Trailblazers · 2025</div>
-        </div>
-      </div>
-    </div>
-
-    <p style="font-size:0.82rem; color:var(--muted); margin-bottom:12px; font-weight:600; text-transform:uppercase; letter-spacing:0.04em;">Certifications</p>
-    <div class="cert-row">
-      <div class="cert-chip">
-        <div class="cert-icon">🎓</div>
-        <div>
-          <div class="cert-name">The Fundamentals of Digital Marketing</div>
-          <div class="cert-issuer">Google Digital Garage · IAB Europe Endorsed</div>
-        </div>
-      </div>
-      <div class="cert-chip">
-        <div class="cert-icon">🐍</div>
-        <div>
-          <div class="cert-name">Python Core</div>
-          <div class="cert-issuer">SoloLearn · April 2020</div>
-        </div>
-      </div>
-      <div class="cert-chip">
-        <div class="cert-icon">🟨</div>
-        <div>
-          <div class="cert-name">JavaScript</div>
-          <div class="cert-issuer">SoloLearn · April 2020</div>
-        </div>
-      </div>
-      <div class="cert-chip">
-        <div class="cert-icon">🗄️</div>
-        <div>
-          <div class="cert-name">SQL</div>
-          <div class="cert-issuer">SoloLearn · June 2021</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="education" class="bg-tint">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="section-eyebrow">// Education</div>
+      <div class="section-eyebrow">Education</div>
       <h2 class="section-title">Academic background</h2>
     </div>
     <div class="edu-card">
@@ -1200,25 +1015,27 @@
   </div>
 </section>
 
-<section>
+<!-- ============ BEYOND WORK ============ -->
+<section class="bg-dim">
   <div class="wrap">
     <div class="section-head">
-      <div class="section-eyebrow">// Beyond Work</div>
+      <div class="section-eyebrow">Beyond Work</div>
       <h2 class="section-title">When I'm off the clock</h2>
     </div>
     <div class="beyond-row">
       <p class="beyond-text">Outside of growth and performance marketing, I stay active through trekking, swimming, and regular gym training — and spend a good chunk of my downtime tracking Indian equity markets, personal investing, and macro &amp; geopolitical trends.</p>
       <div class="beyond-chips">
-        <span class="beyond-chip"><span class="emoji">🥾</span> Trekking</span>
-        <span class="beyond-chip"><span class="emoji">🏊</span> Swimming</span>
-        <span class="beyond-chip"><span class="emoji">🏋️</span> Gym Training</span>
-        <span class="beyond-chip"><span class="emoji">📈</span> Equity Markets</span>
-        <span class="beyond-chip"><span class="emoji">🌍</span> Macro &amp; Geopolitics</span>
+        <span class="beyond-chip">🥾 Trekking</span>
+        <span class="beyond-chip">🏊 Swimming</span>
+        <span class="beyond-chip">🏋️ Gym Training</span>
+        <span class="beyond-chip">📈 Equity Markets</span>
+        <span class="beyond-chip">🌍 Macro &amp; Geopolitics</span>
       </div>
     </div>
   </div>
 </section>
 
+<!-- ============ CTA ============ -->
 <section class="cta-section" id="contact">
   <div class="wrap">
     <h2>Let's talk growth.</h2>
@@ -1235,6 +1052,7 @@
 </footer>
 
 <script>
+  // ---------- Industries data (drives grid + ticker) ----------
   const industries = [
     { name: "Automotive", clients: "Renault, Dacia, Nissan Turkey, Škoda" },
     { name: "Travel & Hospitality", clients: "Celebrity Cruises" },
@@ -1249,93 +1067,144 @@
   ];
 
   const grid = document.getElementById('industryGrid');
-  grid.innerHTML = industries.map(i => `
+  grid.innerHTML = industries.map((ind, i) => `
     <div class="industry-cell">
-      <div class="ind-name">${i.name}</div>
-      <div class="ind-clients">${i.clients}</div>
+      <div class="ind-num">${String(i + 1).padStart(2, '0')}</div>
+      <div class="ind-name">${ind.name}</div>
+      <div class="ind-clients">${ind.clients}</div>
     </div>
   `).join('');
 
-  const marqueeItems = industries.map(i => `
-    <div class="brand-chip">${i.clients.split(',')[0]} <span class="vert">${i.name}</span></div>
+  // ---------- Ticker ----------
+  const tickerData = [
+    { label: 'Annual media managed', value: 'Rs.100Cr+', pos: true },
+    { label: 'CPB reduction · Celebrity Cruises', value: '-35%', pos: true },
+    { label: 'Demo signups · BrightChamps', value: '+2.5x', pos: true },
+    { label: 'Countries scaled', value: '25+', pos: false },
+    { label: 'Completion cost cut · CAPI', value: '-57%', pos: true },
+    { label: 'A/B tests run', value: '50+', pos: false },
+    { label: 'Annual users analyzed', value: '2M+', pos: false },
+    { label: 'CAC reduction · FlexifyMe', value: '-30%', pos: true },
+  ];
+  const tickerHTML = tickerData.map(t => `
+    <div class="ticker-item"><span class="ticker-dot"></span>${t.label} <b class="${t.pos ? 'pos' : ''}">${t.value}</b></div>
   `).join('');
-  document.getElementById('marqueeTrack').innerHTML = marqueeItems + marqueeItems;
+  document.getElementById('tickerTrack').innerHTML = tickerHTML + tickerHTML;
 
-  // ---------- Recognition Carousel ----------
+  // ---------- Recognition Pinboard Carousel ----------
   (function () {
-    const track = document.getElementById('carouselTrack');
-    const slides = Array.from(track.children);
-    const dotsWrap = document.getElementById('carouselDots');
-    const prevBtn = document.getElementById('carouselPrev');
-    const nextBtn = document.getElementById('carouselNext');
-    const carousel = document.getElementById('recogCarousel');
+    const wrap = document.querySelector('.pin-track-wrap');
+    const track = document.getElementById('pinTrack');
+    const cards = Array.from(track.children);
+    const dotsWrap = document.getElementById('pinDots');
+    const prevBtn = document.getElementById('pinPrev');
+    const nextBtn = document.getElementById('pinNext');
     let index = 0;
-    let autoplayTimer = null;
-    const AUTOPLAY_MS = 6000;
+    let perView = 1;
 
-    // build dots
-    slides.forEach((_, i) => {
-      const dot = document.createElement('button');
-      dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
-      dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
-      dot.addEventListener('click', () => goTo(i));
-      dotsWrap.appendChild(dot);
-    });
-    const dots = Array.from(dotsWrap.children);
+    function calcPerView() {
+      const cardW = cards[0].getBoundingClientRect().width + 26;
+      perView = Math.max(1, Math.floor(wrap.getBoundingClientRect().width / cardW));
+    }
+    function maxIndex() { return Math.max(0, cards.length - perView); }
+
+    function buildDots() {
+      dotsWrap.innerHTML = '';
+      const steps = maxIndex() + 1;
+      for (let i = 0; i < steps; i++) {
+        const d = document.createElement('button');
+        d.className = 'pin-dot' + (i === 0 ? ' active' : '');
+        d.setAttribute('aria-label', 'Go to position ' + (i + 1));
+        d.addEventListener('click', () => goTo(i));
+        dotsWrap.appendChild(d);
+      }
+    }
 
     function render() {
-      track.style.transform = `translateX(-${index * 100}%)`;
-      dots.forEach((d, i) => d.classList.toggle('active', i === index));
+      const cardW = cards[0].getBoundingClientRect().width + 26;
+      track.style.transform = `translateX(-${index * cardW}px)`;
+      Array.from(dotsWrap.children).forEach((d, i) => d.classList.toggle('active', i === index));
     }
-
-    function goTo(i) {
-      index = (i + slides.length) % slides.length;
-      render();
-      restartAutoplay();
-    }
-    function next() { goTo(index + 1); }
-    function prev() { goTo(index - 1); }
+    function goTo(i) { index = Math.min(Math.max(0, i), maxIndex()); render(); }
+    function next() { goTo(index + 1 > maxIndex() ? 0 : index + 1); }
+    function prev() { goTo(index - 1 < 0 ? maxIndex() : index - 1); }
 
     prevBtn.addEventListener('click', prev);
     nextBtn.addEventListener('click', next);
 
-    function startAutoplay() {
-      autoplayTimer = setInterval(next, AUTOPLAY_MS);
-    }
-    function restartAutoplay() {
-      clearInterval(autoplayTimer);
-      startAutoplay();
-    }
-    startAutoplay();
-
-    // pause on hover
-    carousel.addEventListener('mouseenter', () => clearInterval(autoplayTimer));
-    carousel.addEventListener('mouseleave', startAutoplay);
-
-    // keyboard navigation when carousel is focused/in view
-    carousel.setAttribute('tabindex', '0');
-    carousel.addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowLeft') prev();
-      if (e.key === 'ArrowRight') next();
-    });
-
-    // swipe support
     let startX = 0, isDown = false;
-    track.addEventListener('pointerdown', (e) => { isDown = true; startX = e.clientX; clearInterval(autoplayTimer); });
+    track.addEventListener('pointerdown', (e) => { isDown = true; startX = e.clientX; });
     track.addEventListener('pointerup', (e) => {
       if (!isDown) return;
       const dx = e.clientX - startX;
-      if (dx > 50) prev();
-      else if (dx < -50) next();
+      if (dx > 50) prev(); else if (dx < -50) next();
       isDown = false;
-      restartAutoplay();
     });
     track.addEventListener('pointerleave', () => { isDown = false; });
 
-    // respect reduced motion preference for autoplay
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      clearInterval(autoplayTimer);
+    function init() { calcPerView(); buildDots(); index = Math.min(index, maxIndex()); render(); }
+    window.addEventListener('resize', init);
+    init();
+  })();
+
+  // ---------- Certification Deck Carousel ----------
+  (function () {
+    const stage = document.getElementById('deckStage');
+    const cards = Array.from(stage.querySelectorAll('.deck-card'));
+    const prevBtn = document.getElementById('deckPrev');
+    const nextBtn = document.getElementById('deckNext');
+    const counter = document.getElementById('deckCounter');
+    let active = 0;
+    const total = cards.length;
+
+    function render() {
+      cards.forEach((card, i) => {
+        let offset = i - active;
+        if (offset > total / 2) offset -= total;
+        if (offset < -total / 2) offset += total;
+
+        const abs = Math.abs(offset);
+        let transform, opacity, z, filter;
+        if (offset === 0) {
+          transform = 'translateX(0) translateY(0) scale(1) rotateY(0deg)';
+          opacity = 1; z = 10; filter = 'none';
+        } else {
+          const dir = offset > 0 ? 1 : -1;
+          transform = `translateX(${dir * 60 * Math.min(abs,2)}%) translateY(${Math.min(abs,2)*14}px) scale(${1 - Math.min(abs,2)*0.14}) rotateY(${dir * -18}deg)`;
+          opacity = abs > 2 ? 0 : 0.55 - (abs-1)*0.2;
+          z = 10 - abs;
+          filter = 'brightness(0.75)';
+        }
+        card.style.transform = transform;
+        card.style.opacity = opacity;
+        card.style.zIndex = z;
+        card.style.filter = filter;
+        card.style.pointerEvents = offset === 0 ? 'auto' : 'none';
+      });
+      counter.innerHTML = `<span>${active + 1}</span> / ${total}`;
     }
+
+    function next() { active = (active + 1) % total; render(); }
+    function prev() { active = (active - 1 + total) % total; render(); }
+
+    prevBtn.addEventListener('click', prev);
+    nextBtn.addEventListener('click', next);
+
+    let startX = 0, isDown = false;
+    stage.addEventListener('pointerdown', (e) => { isDown = true; startX = e.clientX; });
+    stage.addEventListener('pointerup', (e) => {
+      if (!isDown) return;
+      const dx = e.clientX - startX;
+      if (dx > 40) prev(); else if (dx < -40) next();
+      isDown = false;
+    });
+    stage.addEventListener('pointerleave', () => { isDown = false; });
+
+    stage.setAttribute('tabindex', '0');
+    stage.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') prev();
+      if (e.key === 'ArrowRight') next();
+    });
 
     render();
   })();
