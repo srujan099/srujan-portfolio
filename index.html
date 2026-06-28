@@ -284,12 +284,8 @@ section { padding: 100px 0; }
 .narrative-step p { font-size: 0.92rem; color: var(--slate); line-height: 1.6; }
 .narrative-step p b { color: var(--ink); font-weight: 700; }
 
-
 /* =====================================================
    RECOGNITION — CLEAN CAROUSEL, UNCROPPED IMAGES
-   object-fit: contain on a tinted backdrop means every source image
-   (each with a different natural aspect ratio) displays in full —
-   nothing sliced off, regardless of its original shape.
 ===================================================== */
 .rec-carousel { position: relative; }
 .rec-track-wrap {
@@ -361,17 +357,6 @@ section { padding: 100px 0; }
 .deck-counter span { color: var(--mint); }
 
 /* =====================================================
-   AWARDS CHIPS
-===================================================== */
-.cert-row { display: flex; gap: 12px; flex-wrap: wrap; }
-.cert-chip { display: flex; align-items: center; gap: 12px; background: var(--paper); border-radius: 18px; padding: 16px 20px; flex: 1; min-width: 220px; box-shadow: 0 1px 0 var(--line-soft); transition: transform 0.15s; }
-.cert-chip:hover { transform: translateY(-2px); }
-.cert-icon { width: 42px; height: 42px; border-radius: 12px; background: var(--amber-dim); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0; }
-.cert-name { font-weight: 700; font-size: 0.9rem; color: var(--ink); }
-.cert-issuer { font-size: 0.78rem; color: var(--slate); }
-.cert-subhead { font-size: 0.78rem; color: var(--slate); margin-bottom: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
-
-/* =====================================================
    BEYOND WORK
 ===================================================== */
 .beyond-row { display: flex; align-items: center; gap: 32px; flex-wrap: wrap; }
@@ -430,7 +415,6 @@ footer { background: var(--ink); color: #6E6E73; padding: 30px 0; text-align: ce
   .case-head { flex-direction: column; }
   .case-grid { grid-template-columns: 1fr 1fr; }
   .narrative-step { grid-template-columns: 1fr; gap: 6px; }
-  .cert-row { flex-direction: column; }
   .deck-card { width: 82vw; }
   .deck-stage { height: 400px; }
   h1 { font-size: 2.2rem; }
@@ -469,7 +453,6 @@ footer { background: var(--ink); color: #6E6E73; padding: 30px 0; text-align: ce
   </nav>
 </header>
 
-<!-- ============ HERO ============ -->
 <section class="hero">
   <div class="wrap">
     <div class="profile-row">
@@ -500,7 +483,6 @@ footer { background: var(--ink); color: #6E6E73; padding: 30px 0; text-align: ce
   </div>
 </section>
 
-<!-- ============ ACHIEVEMENTS ============ -->
 <section class="bg-fog">
   <div class="wrap">
     <div class="section-head center reveal">
@@ -525,7 +507,6 @@ footer { background: var(--ink); color: #6E6E73; padding: 30px 0; text-align: ce
   </div>
 </section>
 
-<!-- ============ EXPERIENCE ============ -->
 <section id="experience">
   <div class="wrap">
     <div class="section-head reveal">
@@ -608,7 +589,6 @@ footer { background: var(--ink); color: #6E6E73; padding: 30px 0; text-align: ce
   </div>
 </section>
 
-<!-- ============ CASE STUDY ============ -->
 <section id="case-study" class="bg-fog">
   <div class="wrap">
     <div class="section-head reveal">
@@ -663,7 +643,6 @@ footer { background: var(--ink); color: #6E6E73; padding: 30px 0; text-align: ce
   </div>
 </section>
 
-<!-- ============ INDUSTRIES ============ -->
 <section id="industries">
   <div class="wrap">
     <div class="section-head reveal">
@@ -675,7 +654,6 @@ footer { background: var(--ink); color: #6E6E73; padding: 30px 0; text-align: ce
   </div>
 </section>
 
-<!-- ============ EXPERIMENTATION ============ -->
 <section class="bg-fog">
   <div class="wrap">
     <div class="section-head reveal">
@@ -700,7 +678,6 @@ footer { background: var(--ink); color: #6E6E73; padding: 30px 0; text-align: ce
   </div>
 </section>
 
-<!-- ============ RECOGNITION CAROUSEL ============ -->
 <section id="recognition">
   <div class="wrap">
     <div class="section-head reveal">
@@ -785,7 +762,6 @@ footer { background: var(--ink); color: #6E6E73; padding: 30px 0; text-align: ce
   </div>
 </section>
 
-<!-- ============ CERTIFICATIONS — DECK ============ -->
 <section id="certifications" class="bg-fog">
   <div class="wrap">
     <div class="deck-section reveal">
@@ -836,44 +812,9 @@ footer { background: var(--ink); color: #6E6E73; padding: 30px 0; text-align: ce
         <button class="deck-nav" id="deckNext" aria-label="Next">›</button>
       </div>
     </div>
-
-    <div style="margin-top:48px;" class="reveal">
-      <p class="cert-subhead">Company Awards</p>
-      <div class="cert-row" style="margin-bottom:32px;">
-        <div class="cert-chip">
-          <div class="cert-icon">🏆</div>
-          <div><div class="cert-name">Spot Award Winner</div><div class="cert-issuer">Pixis Trailblazers · 2025</div></div>
-        </div>
-        <div class="cert-chip">
-          <div class="cert-icon">🏅</div>
-          <div><div class="cert-name">Monthly Award Winner</div><div class="cert-issuer">Pixis Trailblazers · 2025</div></div>
-        </div>
-      </div>
-
-      <p class="cert-subhead">Quick Reference</p>
-      <div class="cert-row">
-        <div class="cert-chip">
-          <div class="cert-icon">🎓</div>
-          <div><div class="cert-name">Digital Marketing</div><div class="cert-issuer">Google Digital Garage</div></div>
-        </div>
-        <div class="cert-chip">
-          <div class="cert-icon">🐍</div>
-          <div><div class="cert-name">Python Core</div><div class="cert-issuer">SoloLearn · 2020</div></div>
-        </div>
-        <div class="cert-chip">
-          <div class="cert-icon">🟨</div>
-          <div><div class="cert-name">JavaScript</div><div class="cert-issuer">SoloLearn · 2020</div></div>
-        </div>
-        <div class="cert-chip">
-          <div class="cert-icon">🗄️</div>
-          <div><div class="cert-name">SQL</div><div class="cert-issuer">SoloLearn · 2021</div></div>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
-<!-- ============ SKILLS / MARTECH ============ -->
 <section id="skills">
   <div class="wrap">
     <div class="section-head reveal">
@@ -921,7 +862,6 @@ footer { background: var(--ink); color: #6E6E73; padding: 30px 0; text-align: ce
   </div>
 </section>
 
-<!-- ============ EDUCATION ============ -->
 <section id="education" class="bg-fog">
   <div class="wrap">
     <div class="section-head reveal">
@@ -938,7 +878,6 @@ footer { background: var(--ink); color: #6E6E73; padding: 30px 0; text-align: ce
   </div>
 </section>
 
-<!-- ============ BEYOND WORK ============ -->
 <section>
   <div class="wrap">
     <div class="section-head reveal">
@@ -958,7 +897,6 @@ footer { background: var(--ink); color: #6E6E73; padding: 30px 0; text-align: ce
   </div>
 </section>
 
-<!-- ============ CTA ============ -->
 <section class="cta-section" id="contact">
   <div class="wrap">
     <h2>Let's talk growth.</h2>
