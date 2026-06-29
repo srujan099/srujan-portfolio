@@ -78,48 +78,13 @@ header {
 }
 nav {
   display: flex; align-items: center; justify-content: space-between;
-  padding: 12px 24px; max-width: var(--maxw); margin: 0 auto;
+  padding: 14px 24px; max-width: var(--maxw); margin: 0 auto;
 }
-
-/* Image Logo Styles */
-.nav-logo {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  overflow: hidden; /* This keeps the zoom effect constrained strictly inside the circle */
-  display: block;
-  flex-shrink: 0;
-  border: 2px solid var(--paper);
-  box-shadow: 0 2px 10px rgba(0,0,0,0.12);
-  cursor: pointer;
-  background: var(--fog);
+.logo {
+  font-family: var(--display); font-weight: 700; font-size: 1.15rem;
+  color: var(--ink); letter-spacing: -0.02em;
 }
-.nav-logo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-}
-/* Hover zoom inside circle */
-.nav-logo:hover img {
-  transform: scale(1.12);
-}
-/* Click/Active deeper zoom */
-.nav-logo:active img {
-  transform: scale(1.2);
-  transition: transform 0.1s ease;
-}
-
-/* Fallback if image fails */
-.nav-logo-fallback {
-  width: 100%; height: 100%;
-  background: var(--ink); color: var(--paper);
-  display: none; align-items: center; justify-content: center;
-  font-family: var(--display); font-weight: 700; font-size: 0.9rem;
-  transition: transform 0.3s ease;
-}
-.nav-logo:hover .nav-logo-fallback { transform: scale(1.1); }
-
+.logo span { color: var(--accent); }
 .nav-links { display: flex; gap: 28px; font-size: 0.83rem; font-weight: 500; color: var(--ink-soft); }
 .nav-links a { transition: color 0.15s; }
 .nav-links a:hover { color: var(--accent); }
@@ -465,11 +430,7 @@ footer { background: var(--ink); color: #6E6E73; padding: 30px 0; text-align: ce
 
 <header>
   <nav>
-    <a href="#" class="nav-logo" aria-label="Back to top">
-      <img src="assets/srujan_photo.jpg" alt="Srujan Kazipeta" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-      <div class="nav-logo-fallback">SK</div>
-    </a>
-    
+    <div class="logo">SK<span>.</span></div>
     <ul class="nav-links">
       <li><a href="#experience">Experience</a></li>
       <li><a href="#case-study">Case Study</a></li>
@@ -478,7 +439,6 @@ footer { background: var(--ink); color: #6E6E73; padding: 30px 0; text-align: ce
       <li><a href="#certifications">Certifications</a></li>
       <li><a href="#skills">Skills</a></li>
     </ul>
-    
     <div class="nav-actions">
       <a href="https://wa.me/917382669972" target="_blank" rel="noopener" class="icon-btn whatsapp" aria-label="WhatsApp">
         <svg viewBox="0 0 24 24" fill="none"><path d="M17.6 6.32A8.86 8.86 0 0 0 12.05 3.8c-4.92 0-8.93 4-8.93 8.92 0 1.57.42 3.11 1.2 4.46L3 21.2l4.16-1.3a8.9 8.9 0 0 0 4.87 1.43h.01c4.92 0 8.93-4 8.93-8.92a8.86 8.86 0 0 0-2.62-6.3l.25.21zM12.04 19.9a7.4 7.4 0 0 1-3.78-1.04l-.27-.16-2.81.88.89-2.73-.18-.28a7.4 7.4 0 0 1-1.14-3.95c0-4.1 3.34-7.43 7.45-7.43 1.99 0 3.86.78 5.27 2.19a7.39 7.39 0 0 1 2.18 5.26c0 4.1-3.34 7.43-7.45 7.43l-.16-.17z" fill="#1D1D1F"/><path d="M9.6 7.95c-.18-.4-.37-.4-.55-.41h-.47c-.16 0-.42.06-.65.31-.22.25-.86.84-.86 2.04 0 1.2.88 2.36 1 2.52.13.16 1.74 2.79 4.31 3.8 2.13.84 2.57.67 3.03.63.47-.04 1.52-.62 1.73-1.22.21-.6.21-1.11.15-1.22-.07-.1-.25-.16-.52-.29-.28-.13-1.63-.81-1.89-.9-.25-.09-.43-.13-.6.13-.18.27-.7.9-.86 1.08-.16.19-.31.21-.58.07-.27-.13-1.13-.42-2.15-1.34-.79-.71-1.33-1.6-1.49-1.86-.16-.28-.02-.43.12-.59.13-.16.3-.4.45-.6.15-.2.2-.34.31-.55.1-.21.05-.4-.03-.56l-.45-1.04z" fill="#1D1D1F"/></svg>
