@@ -257,35 +257,51 @@ section { padding: 100px 0; }
 /* =====================================================
    CASE STUDY
 ===================================================== */
-.case-card { background: var(--paper); border-radius: 28px; overflow: hidden; box-shadow: 0 30px 60px -32px rgba(0,0,0,0.25); }
-.case-head {
-  background: var(--ink); color: var(--fog); padding: 44px 40px 36px;
-  display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; flex-wrap: wrap;
+/* =====================================================
+   PROJECTS — builder cards
+===================================================== */
+.proj-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 16px; }
+.proj-card {
+  background: var(--paper); border-radius: 26px; padding: 32px 28px;
+  box-shadow: 0 1px 0 var(--line-soft), 0 24px 48px -32px rgba(0,0,0,0.2);
+  display: flex; flex-direction: column; align-items: flex-start;
+  transition: transform 0.22s, box-shadow 0.22s;
+  position: relative; overflow: hidden;
 }
-.case-tag { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; background: var(--accent); color: var(--paper); padding: 6px 14px; border-radius: 999px; display: inline-block; margin-bottom: 18px; font-weight: 700; }
-.case-head h3 { font-family: var(--display); font-size: 1.7rem; margin-bottom: 10px; font-weight: 700; letter-spacing: -0.01em; }
-.case-head p { color: #98989D; font-size: 0.98rem; max-width: 480px; }
-.case-link { background: var(--paper); color: var(--ink) !important; padding: 12px 22px; border-radius: 999px; font-size: 0.88rem; font-weight: 700; white-space: nowrap; transition: background 0.15s; }
-.case-link:hover { background: var(--accent); color: var(--paper) !important; }
-.case-body { padding: 36px 40px; }
-.case-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 32px; }
-.case-metric { text-align: center; padding: 22px 10px; background: var(--fog); border-radius: 16px; }
-.case-metric .num { font-family: var(--display); font-weight: 700; font-size: 1.5rem; color: var(--accent); }
-.case-metric:nth-child(2) .num { color: var(--amber); }
-.case-metric:nth-child(3) .num { color: var(--mint); }
-.case-metric:nth-child(4) .num { color: var(--accent); }
-.case-metric .lbl { font-size: 0.76rem; color: var(--slate); margin-top: 6px; }
-.case-narrative { display: flex; flex-direction: column; gap: 26px; margin-bottom: 36px; }
-.narrative-step { display: grid; grid-template-columns: 48px 1fr; gap: 18px; }
-.narrative-num { font-family: var(--display); font-size: 1.05rem; font-weight: 700; color: var(--accent); padding-top: 2px; }
-.narrative-step:nth-child(2) .narrative-num { color: var(--amber); }
-.narrative-step:nth-child(3) .narrative-num { color: var(--mint); }
-.narrative-step h4 { font-size: 0.98rem; color: var(--ink); margin-bottom: 6px; font-weight: 700; }
-.narrative-step p { font-size: 0.92rem; color: var(--slate); line-height: 1.6; }
-.narrative-step p b { color: var(--ink); font-weight: 700; }
+.proj-card:hover { transform: translateY(-5px); box-shadow: 0 30px 56px -30px rgba(0,0,0,0.3); }
+.proj-card.featured {
+  background: var(--ink); color: var(--fog);
+}
+.proj-card.featured::before {
+  content: ''; position: absolute; top: -40%; right: -25%; width: 300px; height: 300px;
+  background: radial-gradient(circle, rgba(0,102,255,0.35), transparent 68%);
+}
+.proj-badge {
+  font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;
+  background: var(--mint); color: var(--ink); padding: 6px 13px; border-radius: 999px; margin-bottom: 18px;
+  position: relative;
+}
+.proj-badge.alt { background: var(--fog); color: var(--ink-soft); }
+.proj-card h3 { font-family: var(--display); font-size: 1.5rem; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 6px; position: relative; }
+.proj-card.featured h3 { color: var(--paper); font-size: 1.8rem; }
+.proj-tagline { font-size: 0.92rem; color: #98989D; font-weight: 600; margin-bottom: 12px; position: relative; }
+.proj-desc { font-size: 0.92rem; line-height: 1.6; color: var(--slate); margin-bottom: 18px; flex: 1; position: relative; }
+.proj-card.featured .proj-desc { color: #B9B9C0; }
+.proj-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 4px; position: relative; }
+.proj-tags span { font-size: 0.74rem; font-weight: 600; background: var(--fog); color: var(--ink-soft); padding: 5px 12px; border-radius: 999px; }
+.proj-card.featured .proj-tags span { background: rgba(255,255,255,0.1); color: var(--fog); }
+.proj-link {
+  margin-top: 16px; background: var(--accent); color: var(--paper) !important; padding: 11px 20px;
+  border-radius: 999px; font-size: 0.86rem; font-weight: 700; transition: background 0.18s; position: relative;
+}
+.proj-link:hover { background: #0052CC; }
+
 
 /* =====================================================
    RECOGNITION — CLEAN CAROUSEL, UNCROPPED IMAGES
+   object-fit: contain on a tinted backdrop means every source image
+   (each with a different natural aspect ratio) displays in full —
+   nothing sliced off, regardless of its original shape.
 ===================================================== */
 .rec-carousel { position: relative; }
 .rec-track-wrap {
@@ -357,6 +373,17 @@ section { padding: 100px 0; }
 .deck-counter span { color: var(--mint); }
 
 /* =====================================================
+   AWARDS CHIPS
+===================================================== */
+.cert-row { display: flex; gap: 12px; flex-wrap: wrap; }
+.cert-chip { display: flex; align-items: center; gap: 12px; background: var(--paper); border-radius: 18px; padding: 16px 20px; flex: 1; min-width: 220px; box-shadow: 0 1px 0 var(--line-soft); transition: transform 0.15s; }
+.cert-chip:hover { transform: translateY(-2px); }
+.cert-icon { width: 42px; height: 42px; border-radius: 12px; background: var(--amber-dim); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0; }
+.cert-name { font-weight: 700; font-size: 0.9rem; color: var(--ink); }
+.cert-issuer { font-size: 0.78rem; color: var(--slate); }
+.cert-subhead { font-size: 0.78rem; color: var(--slate); margin-bottom: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
+
+/* =====================================================
    BEYOND WORK
 ===================================================== */
 .beyond-row { display: flex; align-items: center; gap: 32px; flex-wrap: wrap; }
@@ -394,12 +421,60 @@ footer { background: var(--ink); color: #6E6E73; padding: 30px 0; text-align: ce
 /* =====================================================
    RESPONSIVE
 ===================================================== */
+/* =====================================================
+   CONVERSION LAYER — progress bar, brand wall, floating CTA
+===================================================== */
+.achieve-num .cnt { color: var(--ink); }
+
+.scroll-progress {
+  position: fixed; top: 0; left: 0; height: 3px; width: 0%;
+  background: linear-gradient(90deg, var(--accent), var(--mint));
+  z-index: 300; transition: width 0.1s linear;
+}
+
+.brand-wall { border-top: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft); background: var(--paper); padding: 22px 0; overflow: hidden; }
+.brand-label { text-align: center; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--slate); font-weight: 700; margin-bottom: 16px; }
+.brand-track-wrap {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, black 10%, black 90%, transparent);
+  mask-image: linear-gradient(90deg, transparent, black 10%, black 90%, transparent);
+}
+.brand-track { display: flex; gap: 14px; width: max-content; animation: brand-scroll 36s linear infinite; }
+.brand-track:hover { animation-play-state: paused; }
+@keyframes brand-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.brand-chip {
+  display: inline-flex; align-items: center; gap: 10px; white-space: nowrap;
+  font-family: var(--display); font-weight: 800; font-size: 1rem; letter-spacing: -0.01em;
+  color: var(--ink); background: var(--fog); padding: 8px 20px 8px 8px; border-radius: 999px;
+}
+.brand-mono {
+  width: 34px; height: 34px; border-radius: 50%; flex-shrink: 0;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-family: var(--display); font-weight: 800; font-size: 0.82rem; color: #fff;
+}
+.brand-chip.employer { background: var(--ink); color: var(--paper); }
+.brand-chip .vert { font-family: var(--body); font-weight: 600; font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent); }
+.brand-chip.employer .vert { color: var(--mint); }
+
+.float-cta {
+  position: fixed; bottom: 24px; right: 24px; z-index: 250;
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--ink); color: var(--paper); padding: 14px 24px; border-radius: 999px;
+  font-weight: 700; font-size: 0.9rem; box-shadow: 0 16px 36px -10px rgba(0,0,0,0.4);
+  opacity: 0; transform: translateY(16px); pointer-events: none;
+  transition: opacity 0.3s, transform 0.3s, background 0.2s;
+}
+.float-cta.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
+.float-cta:hover { background: var(--accent); }
+.float-cta .pulse-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--mint); animation: fpulse 1.8s infinite; }
+@keyframes fpulse { 0%,100% { opacity: 1; } 50% { opacity: 0.35; } }
+
 @media (max-width: 980px) {
   .industry-grid { grid-template-columns: repeat(2, 1fr); }
   .skills-grid { grid-template-columns: 1fr; }
   .achieve-grid { grid-template-columns: 1fr; }
   .timeline-item { grid-template-columns: 1fr; gap: 10px; }
-  .case-grid { grid-template-columns: repeat(2, 1fr); }
+  .proj-grid { grid-template-columns: 1fr; }
   .stat-strip-grid { grid-template-columns: repeat(3, 1fr); }
   .stat-cell:nth-child(3n) { border-right: none; }
   .deck-stage { height: 420px; }
@@ -412,9 +487,7 @@ footer { background: var(--ink); color: #6E6E73; padding: 30px 0; text-align: ce
   section { padding: 64px 0; }
   .industry-grid { grid-template-columns: 1fr 1fr; }
   .cta-buttons { flex-direction: column; }
-  .case-head { flex-direction: column; }
-  .case-grid { grid-template-columns: 1fr 1fr; }
-  .narrative-step { grid-template-columns: 1fr; gap: 6px; }
+  .cert-row { flex-direction: column; }
   .deck-card { width: 82vw; }
   .deck-stage { height: 400px; }
   h1 { font-size: 2.2rem; }
@@ -428,12 +501,14 @@ footer { background: var(--ink); color: #6E6E73; padding: 30px 0; text-align: ce
 </head>
 <body>
 
+<div class="scroll-progress" id="scrollProgress"></div>
+
 <header>
   <nav>
     <div class="logo">SK<span>.</span></div>
     <ul class="nav-links">
       <li><a href="#experience">Experience</a></li>
-      <li><a href="#case-study">Case Study</a></li>
+      <li><a href="#projects">Projects</a></li>
       <li><a href="#industries">Industries</a></li>
       <li><a href="#recognition">Recognition</a></li>
       <li><a href="#certifications">Certifications</a></li>
@@ -453,6 +528,7 @@ footer { background: var(--ink); color: #6E6E73; padding: 30px 0; text-align: ce
   </nav>
 </header>
 
+<!-- ============ HERO ============ -->
 <section class="hero">
   <div class="wrap">
     <div class="profile-row">
@@ -473,16 +549,25 @@ footer { background: var(--ink); color: #6E6E73; padding: 30px 0; text-align: ce
 
     <div class="stat-strip reveal">
       <div class="stat-strip-grid">
-        <div class="stat-cell"><div class="stat-num">Rs.100Cr+</div><div class="stat-label">Annual media managed</div></div>
-        <div class="stat-cell"><div class="stat-num">25+</div><div class="stat-label">Countries scaled across</div></div>
-        <div class="stat-cell"><div class="stat-num">2.5x</div><div class="stat-label">Demo sign-up lift via CAPI</div></div>
-        <div class="stat-cell"><div class="stat-num">2M+</div><div class="stat-label">Annual users analyzed</div></div>
-        <div class="stat-cell"><div class="stat-num">5+ yrs</div><div class="stat-label">Growth &amp; performance</div></div>
+        <div class="stat-cell"><div class="stat-num">Rs.<span class="cnt" data-to="100">0</span>Cr+</div><div class="stat-label">Annual media managed</div></div>
+        <div class="stat-cell"><div class="stat-num"><span class="cnt" data-to="25">0</span>+</div><div class="stat-label">Countries scaled across</div></div>
+        <div class="stat-cell"><div class="stat-num"><span class="cnt" data-to="2.5" data-dec="1">0</span>x</div><div class="stat-label">Demo sign-up lift via CAPI</div></div>
+        <div class="stat-cell"><div class="stat-num"><span class="cnt" data-to="2">0</span>M+</div><div class="stat-label">Annual users analyzed</div></div>
+        <div class="stat-cell"><div class="stat-num"><span class="cnt" data-to="5">0</span>+ yrs</div><div class="stat-label">Growth &amp; performance</div></div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- ============ BRAND WALL ============ -->
+<div class="brand-wall">
+  <div class="brand-label">Companies &amp; brands I've driven growth for</div>
+  <div class="brand-track-wrap">
+    <div class="brand-track" id="brandTrack"></div>
+  </div>
+</div>
+
+<!-- ============ ACHIEVEMENTS ============ -->
 <section class="bg-fog">
   <div class="wrap">
     <div class="section-head center reveal">
@@ -492,11 +577,11 @@ footer { background: var(--ink); color: #6E6E73; padding: 30px 0; text-align: ce
     </div>
     <div class="achieve-grid reveal">
       <div class="achieve-cell">
-        <div class="achieve-num">35<span>%</span></div>
+        <div class="achieve-num"><span class="cnt" data-to="35">0</span><span>%</span></div>
         <div class="achieve-cap">Reduction in Cost Per Booking for Celebrity Cruises Australia, QoQ — while scaling spend.</div>
       </div>
       <div class="achieve-cell">
-        <div class="achieve-num">57<span>%</span></div>
+        <div class="achieve-num"><span class="cnt" data-to="57">0</span><span>%</span></div>
         <div class="achieve-cap">Lower demo completion cost at BrightChamps after implementing Meta Conversions API.</div>
       </div>
       <div class="achieve-cell">
@@ -507,6 +592,7 @@ footer { background: var(--ink); color: #6E6E73; padding: 30px 0; text-align: ce
   </div>
 </section>
 
+<!-- ============ EXPERIENCE ============ -->
 <section id="experience">
   <div class="wrap">
     <div class="section-head reveal">
@@ -589,60 +675,43 @@ footer { background: var(--ink); color: #6E6E73; padding: 30px 0; text-align: ce
   </div>
 </section>
 
-<section id="case-study" class="bg-fog">
+<!-- ============ PROJECTS ============ -->
+<section id="projects" class="bg-fog">
   <div class="wrap">
     <div class="section-head reveal">
-      <div class="section-eyebrow amber">Featured Work</div>
-      <h2 class="section-title">From scattered spend to a clear winner.</h2>
-      <p class="section-desc">A real Meta Ads diagnostic I ran at Pixis for Blissclub, a women's activewear eCommerce brand — turning 19 live adsets of noisy data into one prioritized call.</p>
+      <div class="section-eyebrow amber">Beyond Campaigns</div>
+      <h2 class="section-title">A marketer who ships.</h2>
+      <p class="section-desc">I don't just run growth — I build the tools. Self-taught, hands-on, deployed.</p>
     </div>
 
-    <div class="case-card reveal">
-      <div class="case-head">
-        <div>
-          <span class="case-tag">Meta Ads · eCommerce</span>
-          <h3>Blissclub — Finding the Signal in 19 Live Adsets</h3>
-          <p>The account was running 19 adsets across multiple campaigns with no clear read on which audience-creative combination was actually working — spend was getting spread thin instead of doubled down.</p>
-        </div>
-        <a href="https://www.blissclub.com" target="_blank" rel="noopener" class="case-link">Visit Blissclub.com →</a>
+    <div class="proj-grid reveal">
+      <div class="proj-card featured">
+        <div class="proj-badge">🚀 Live Product</div>
+        <h3>Argus</h3>
+        <p class="proj-tagline">AI-powered business monitoring for Indian SMBs &amp; agencies</p>
+        <p class="proj-desc">Designed, built, and deployed end-to-end — an AI platform that watches business metrics and surfaces what needs attention, so small teams don't need a full-time analyst. Built with zero prior dev experience, shipped to production.</p>
+        <div class="proj-tags"><span>AI</span><span>SMB SaaS</span><span>Self-built</span></div>
+        <a href="https://srujan099.github.io/argus-app/" target="_blank" rel="noopener" class="proj-link">View live app →</a>
       </div>
 
-      <div class="case-body">
-        <div class="case-narrative">
-          <div class="narrative-step">
-            <div class="narrative-num">01</div>
-            <div>
-              <h4>The problem</h4>
-              <p>CTR, CVR, and CPL were all moving in different directions month to month, with no single adset or campaign clearly outperforming. Budget was getting allocated roughly evenly instead of toward what was actually converting.</p>
-            </div>
-          </div>
-          <div class="narrative-step">
-            <div class="narrative-num">02</div>
-            <div>
-              <h4>What the data showed</h4>
-              <p>Ranking every campaign and adset by ROAS surfaced two distinct winners: <b>Campaign 5</b> was quietly driving <b>37% of all results</b> on its targeting alone, while <b>Campaign 7</b> posted the strongest CVR (4.55%) and ROAS (2.38) — signal that its creative, not its audience, was the differentiator.</p>
-            </div>
-          </div>
-          <div class="narrative-step">
-            <div class="narrative-num">03</div>
-            <div>
-              <h4>The call I made</h4>
-              <p>Rather than reallocating budget evenly across "good enough" performers, I recommended merging Campaign 5's proven targeting with Campaign 7's creative — concentrating spend on the one combination both signals agreed on, and pulling budget out of the bottom-quartile adsets entirely.</p>
-            </div>
-          </div>
-        </div>
+      <div class="proj-card">
+        <div class="proj-badge alt">⚙️ Automation</div>
+        <h3>Campaign Report Engine</h3>
+        <p class="proj-desc">Automated HTML performance-report generation for Google SEM and Meta campaigns — turning hours of weekly manual reporting into a one-click pipeline used for client business reviews.</p>
+        <div class="proj-tags"><span>Google Ads</span><span>Meta</span><span>Automation</span></div>
+      </div>
 
-        <div class="case-grid">
-          <div class="case-metric"><div class="num">3.88</div><div class="lbl">Best single adset ROAS</div></div>
-          <div class="case-metric"><div class="num">37%</div><div class="lbl">Of all results from 1 campaign</div></div>
-          <div class="case-metric"><div class="num">4.55%</div><div class="lbl">Top campaign CVR</div></div>
-          <div class="case-metric"><div class="num">19→1</div><div class="lbl">Adsets reduced to a single thesis</div></div>
-        </div>
+      <div class="proj-card">
+        <div class="proj-badge alt">🎨 This Site</div>
+        <h3>This Portfolio</h3>
+        <p class="proj-desc">Hand-built and deployed on GitHub Pages — no template, no site builder. HTML, CSS, and vanilla JS, iterated the same way I iterate campaigns: test, measure, refine.</p>
+        <div class="proj-tags"><span>HTML/CSS</span><span>JavaScript</span><span>GitHub Pages</span></div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- ============ INDUSTRIES ============ -->
 <section id="industries">
   <div class="wrap">
     <div class="section-head reveal">
@@ -654,6 +723,7 @@ footer { background: var(--ink); color: #6E6E73; padding: 30px 0; text-align: ce
   </div>
 </section>
 
+<!-- ============ EXPERIMENTATION ============ -->
 <section class="bg-fog">
   <div class="wrap">
     <div class="section-head reveal">
@@ -678,6 +748,7 @@ footer { background: var(--ink); color: #6E6E73; padding: 30px 0; text-align: ce
   </div>
 </section>
 
+<!-- ============ RECOGNITION CAROUSEL ============ -->
 <section id="recognition">
   <div class="wrap">
     <div class="section-head reveal">
@@ -762,6 +833,7 @@ footer { background: var(--ink); color: #6E6E73; padding: 30px 0; text-align: ce
   </div>
 </section>
 
+<!-- ============ CERTIFICATIONS — DECK ============ -->
 <section id="certifications" class="bg-fog">
   <div class="wrap">
     <div class="deck-section reveal">
@@ -812,9 +884,44 @@ footer { background: var(--ink); color: #6E6E73; padding: 30px 0; text-align: ce
         <button class="deck-nav" id="deckNext" aria-label="Next">›</button>
       </div>
     </div>
+
+    <div style="margin-top:48px;" class="reveal">
+      <p class="cert-subhead">Company Awards</p>
+      <div class="cert-row" style="margin-bottom:32px;">
+        <div class="cert-chip">
+          <div class="cert-icon">🏆</div>
+          <div><div class="cert-name">Spot Award Winner</div><div class="cert-issuer">Pixis Trailblazers · 2025</div></div>
+        </div>
+        <div class="cert-chip">
+          <div class="cert-icon">🏅</div>
+          <div><div class="cert-name">Monthly Award Winner</div><div class="cert-issuer">Pixis Trailblazers · 2025</div></div>
+        </div>
+      </div>
+
+      <p class="cert-subhead">Quick Reference</p>
+      <div class="cert-row">
+        <div class="cert-chip">
+          <div class="cert-icon">🎓</div>
+          <div><div class="cert-name">Digital Marketing</div><div class="cert-issuer">Google Digital Garage</div></div>
+        </div>
+        <div class="cert-chip">
+          <div class="cert-icon">🐍</div>
+          <div><div class="cert-name">Python Core</div><div class="cert-issuer">SoloLearn · 2020</div></div>
+        </div>
+        <div class="cert-chip">
+          <div class="cert-icon">🟨</div>
+          <div><div class="cert-name">JavaScript</div><div class="cert-issuer">SoloLearn · 2020</div></div>
+        </div>
+        <div class="cert-chip">
+          <div class="cert-icon">🗄️</div>
+          <div><div class="cert-name">SQL</div><div class="cert-issuer">SoloLearn · 2021</div></div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
+<!-- ============ SKILLS / MARTECH ============ -->
 <section id="skills">
   <div class="wrap">
     <div class="section-head reveal">
@@ -862,6 +969,7 @@ footer { background: var(--ink); color: #6E6E73; padding: 30px 0; text-align: ce
   </div>
 </section>
 
+<!-- ============ EDUCATION ============ -->
 <section id="education" class="bg-fog">
   <div class="wrap">
     <div class="section-head reveal">
@@ -878,6 +986,7 @@ footer { background: var(--ink); color: #6E6E73; padding: 30px 0; text-align: ce
   </div>
 </section>
 
+<!-- ============ BEYOND WORK ============ -->
 <section>
   <div class="wrap">
     <div class="section-head reveal">
@@ -897,6 +1006,7 @@ footer { background: var(--ink); color: #6E6E73; padding: 30px 0; text-align: ce
   </div>
 </section>
 
+<!-- ============ CTA ============ -->
 <section class="cta-section" id="contact">
   <div class="wrap">
     <h2>Let's talk growth.</h2>
@@ -918,6 +1028,8 @@ footer { background: var(--ink); color: #6E6E73; padding: 30px 0; text-align: ce
     </div>
   </div>
 </section>
+
+<a href="#contact" class="float-cta" id="floatCta"><span class="pulse-dot"></span>Let's talk growth</a>
 
 <footer>
   <div class="wrap">Srujan Kazipeta — Bengaluru, India · Built with care.</div>
@@ -951,6 +1063,71 @@ footer { background: var(--ink); color: #6E6E73; padding: 30px 0; text-align: ce
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { threshold: 0.12 });
   revealEls.forEach(el => io.observe(el));
+
+  // ---------- Brand Wall ----------
+  const monoColors = ['#0066FF','#00B368','#FF9F0A','#7C3AED','#E11D48','#0891B2','#D97706','#059669','#4F46E5','#DC2626','#0D9488','#9333EA','#2563EB'];
+  const employers = [
+    { name: 'Pixis.ai', vert: 'AdTech · Current' },
+    { name: 'FlexifyMe', vert: 'Healthtech' },
+    { name: 'BrightChamps', vert: 'EdTech' },
+  ];
+  const clients = [
+    { name: 'Swiggy', vert: 'Quick Commerce' },
+    { name: 'Renault', vert: 'Automotive' },
+    { name: 'Celebrity Cruises', vert: 'Travel' },
+    { name: 'UTI Mutual Fund', vert: 'Finance' },
+    { name: 'Singtel', vert: 'Telecom' },
+    { name: 'Nissan Turkey', vert: 'Automotive' },
+    { name: 'Ketto', vert: 'Fundraising' },
+    { name: 'EuroKids', vert: 'Education' },
+    { name: 'Coty', vert: 'Consumer Goods' },
+    { name: 'Dacia', vert: 'Automotive' },
+    { name: 'Blissclub', vert: 'eCommerce' },
+    { name: 'TimesPro', vert: 'Education' },
+    { name: 'Hepsiemlak', vert: 'Real Estate' },
+  ];
+  const initials = n => n.split(' ').map(w => w[0]).join('').slice(0,2).toUpperCase();
+  const brandHTML =
+    employers.map((b,i) => `<span class="brand-chip employer"><span class="brand-mono" style="background:${monoColors[i]}">${initials(b.name)}</span>${b.name} <span class="vert">${b.vert}</span></span>`).join('') +
+    clients.map((b,i) => `<span class="brand-chip"><span class="brand-mono" style="background:${monoColors[(i+3)%monoColors.length]}">${initials(b.name)}</span>${b.name} <span class="vert">${b.vert}</span></span>`).join('');
+  document.getElementById('brandTrack').innerHTML = brandHTML + brandHTML;
+
+  // ---------- Count-up numbers ----------
+  const counters = document.querySelectorAll('.cnt');
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const cntIO = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      cntIO.unobserve(e.target);
+      const el = e.target;
+      const to = parseFloat(el.dataset.to);
+      const dec = parseInt(el.dataset.dec || '0', 10);
+      if (reduceMotion) { el.textContent = to.toFixed(dec); return; }
+      const dur = 1400;
+      const t0 = performance.now();
+      function tick(t) {
+        const p = Math.min(1, (t - t0) / dur);
+        const eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = (to * eased).toFixed(dec);
+        if (p < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    });
+  }, { threshold: 0.6 });
+  counters.forEach(el => cntIO.observe(el));
+
+  // ---------- Scroll progress + floating CTA ----------
+  const progressBar = document.getElementById('scrollProgress');
+  const floatCta = document.getElementById('floatCta');
+  function onScroll() {
+    const h = document.documentElement;
+    const scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+    progressBar.style.width = (scrolled * 100) + '%';
+    const nearContact = h.scrollTop + h.clientHeight > h.scrollHeight - 600;
+    floatCta.classList.toggle('show', h.scrollTop > 500 && !nearContact);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
 
   // ---------- Recognition Carousel ----------
   (function () {
